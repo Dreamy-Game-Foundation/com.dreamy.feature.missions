@@ -1,0 +1,12 @@
+{
+  "name": "Dreamy.Feature.Missions.Integration.Runtime",
+  "rootNamespace": "Dreamy.Feature.Missions.Integration",
+  "references": [
+    "Dreamy.Missions.Runtime",
+    "Dreamy.Core.Runtime",
+    "Dreamy.UI.Runtime",
+    "Unity.TextMeshPro",
+    "UnityEngine.UI",
+    "UniTask"
+  ]
+}

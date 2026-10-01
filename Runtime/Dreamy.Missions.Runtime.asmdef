@@ -1,0 +1,8 @@
+{
+  "name": "Dreamy.Missions.Runtime",
+  "rootNamespace": "Dreamy.Missions",
+  "references": ["Dreamy.Core.Runtime", "Dreamy.DataConfig.Runtime", "Dreamy.Datasave.Runtime", "Dreamy.Economy.Runtime"],
+  "overrideReferences": true,
+  "precompiledReferences": ["Newtonsoft.Json.dll"],
+  "autoReferenced": true
+}

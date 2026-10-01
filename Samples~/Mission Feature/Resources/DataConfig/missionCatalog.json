@@ -1,0 +1,29 @@
+{
+  "catalogId": "missions-v1",
+  "missions": [
+    {
+      "id": "win-3-stages",
+      "titleKey": "Win 3 stages",
+      "eventKey": "stage.win",
+      "target": 3,
+      "rewardResourceId": "currency.coin",
+      "rewardAmount": 100
+    },
+    {
+      "id": "win-10-stages",
+      "titleKey": "Win 10 stages",
+      "eventKey": "stage.win",
+      "target": 10,
+      "rewardResourceId": "currency.gem",
+      "rewardAmount": 5
+    },
+    {
+      "id": "collect-100-coins",
+      "titleKey": "Collect 100 coins",
+      "eventKey": "coin.collect",
+      "target": 100,
+      "rewardResourceId": "currency.coin",
+      "rewardAmount": 50
+    }
+  ]
+}

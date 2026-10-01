@@ -1,0 +1,10 @@
+{
+  "name": "Dreamy.Missions.Runtime.Tests",
+  "includePlatforms": ["Editor"],
+  "overrideReferences": true,
+  "precompiledReferences": ["nunit.framework.dll", "Newtonsoft.Json.dll"],
+  "references": ["Dreamy.Missions.Runtime", "Dreamy.DataConfig.Runtime", "Dreamy.Datasave.Runtime", "Dreamy.Economy.Runtime"],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "defineConstraints": ["UNITY_INCLUDE_TESTS"],
+  "autoReferenced": false
+}
