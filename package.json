@@ -5,7 +5,7 @@
   "description": "Persistent one-time counter missions with explicit progress events and claimable economy rewards.",
   "unity": "6000.0",
   "license": "UNLICENSED",
-  "author": { "name": "Dreamy Studio" },
+  "author": { "name": "Dreamy Game Studio" },
   "dependencies": {
     "com.dreamy.core": "1.1.2",
     "com.dreamy.feature": "0.1.0",
