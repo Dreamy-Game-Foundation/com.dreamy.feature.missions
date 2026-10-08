@@ -1,8 +1,9 @@
 using System;
+using Dreamy.UI;
 
 namespace Dreamy.Missions
 {
-    public sealed class MissionPresenter : IDisposable
+    public sealed class MissionPresenter : IPanelPresenter
     {
         private readonly IMissionService service;
         private readonly IMissionView view;

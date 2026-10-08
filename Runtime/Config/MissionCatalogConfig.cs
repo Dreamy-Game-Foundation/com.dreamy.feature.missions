@@ -10,8 +10,8 @@ namespace Dreamy.Missions
     {
         [JsonProperty("catalogId", Required = Required.Always)] private string catalogId;
         [JsonProperty("missions", Required = Required.Always)] private List<MissionDefinition> missions = new();
-        public string CatalogId => catalogId;
-        public IReadOnlyList<MissionDefinition> Missions => missions.AsReadOnly();
+        [JsonIgnore] public string CatalogId => catalogId;
+        [JsonIgnore] public IReadOnlyList<MissionDefinition> Missions => missions.AsReadOnly();
 
         public override void Initialize(string documentName)
         {

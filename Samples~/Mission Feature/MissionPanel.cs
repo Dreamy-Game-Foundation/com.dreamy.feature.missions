@@ -16,25 +16,16 @@ namespace Dreamy.Feature.Missions.Integration
         [SerializeField] private Transform itemContainer;
         [SerializeField] private MissionItem itemPrefab;
         private readonly List<MissionItem> items = new();
-        private MissionPresenter presenter;
         public override bool CanBack => true;
         public event Action<string> ClaimRequested;
         public event Action CloseRequested;
-        public void Configure(IMissionService service)
-        {
-            presenter?.Dispose();
-            presenter = new MissionPresenter(service, this);
-            if (isActiveAndEnabled) presenter.Show();
-        }
         private void OnEnable()
         {
             closeButton.onClick.AddListener(RequestClose);
-            presenter?.Show();
         }
         protected override void OnDisable()
         {
             closeButton.onClick.RemoveListener(RequestClose);
-            presenter?.Dispose();
             base.OnDisable();
         }
         public void Render(IReadOnlyList<MissionState> state)
@@ -56,7 +47,6 @@ namespace Dreamy.Feature.Missions.Integration
         public void Close() => Hide().Forget();
         protected override void OnDestroy()
         {
-            presenter?.Dispose();
             foreach (MissionItem item in items) if (item != null) item.ClaimRequested -= RequestClaim;
             base.OnDestroy();
         }

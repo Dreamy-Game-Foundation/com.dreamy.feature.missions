@@ -12,7 +12,28 @@ namespace Dreamy.Missions.Tests
     public sealed class MissionModelTests
     {
         private const string Json = "{\"catalogId\":\"test\",\"missions\":[{\"id\":\"wins\",\"titleKey\":\"Win\",\"eventKey\":\"win\",\"target\":3,\"rewardResourceId\":\"currency.coin\",\"rewardAmount\":10},{\"id\":\"wins-long\",\"titleKey\":\"Win more\",\"eventKey\":\"win\",\"target\":10,\"rewardResourceId\":\"currency.coin\",\"rewardAmount\":20}]}";
-        private static MissionCatalogConfig Catalog(string json = Json) => JsonConvert.DeserializeObject<MissionCatalogConfig>(json);
+        private static MissionCatalogConfig Catalog(string json = Json) => JsonConvert.DeserializeObject<MissionCatalogConfig>(json, DataConfigJson.Settings);
+
+        [Test] public void Catalog_UsesDataConfigSettings_AndRoundTrips()
+        {
+            MissionCatalogConfig catalog = Catalog();
+            catalog.Initialize("missionCatalog");
+            Assert.That(catalog.CatalogId, Is.EqualTo("test"));
+            Assert.That(catalog.Missions.Count, Is.EqualTo(2));
+            Assert.That(catalog.Missions[0].Id, Is.EqualTo("wins"));
+            Assert.That(catalog.Missions[0].Target, Is.EqualTo(3));
+
+            string json = JsonConvert.SerializeObject(catalog, DataConfigJson.Settings);
+            MissionCatalogConfig restored = Catalog(json);
+            restored.Initialize("missionCatalog");
+            Assert.That(restored.CatalogId, Is.EqualTo(catalog.CatalogId));
+            Assert.That(restored.Missions.Select(m => m.Id), Is.EqualTo(catalog.Missions.Select(m => m.Id)));
+        }
+
+        [TestCase("{\"missions\":[]}")]
+        [TestCase("{\"catalogId\":\"test\"}")]
+        public void Catalog_MissingRequiredMember_IsRejected(string json) =>
+            Assert.Throws<JsonSerializationException>(() => Catalog(json));
 
         [Test] public void Progress_UpdatesAllMatchingMissions_AndCapsWithoutOverflow()
         {
