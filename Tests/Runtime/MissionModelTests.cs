@@ -14,6 +14,15 @@ namespace Dreamy.Missions.Tests
         private const string Json = "{\"catalogId\":\"test\",\"missions\":[{\"id\":\"wins\",\"titleKey\":\"Win\",\"eventKey\":\"win\",\"target\":3,\"rewardResourceId\":\"currency.coin\",\"rewardAmount\":10},{\"id\":\"wins-long\",\"titleKey\":\"Win more\",\"eventKey\":\"win\",\"target\":10,\"rewardResourceId\":\"currency.coin\",\"rewardAmount\":20}]}";
         private static MissionCatalogConfig Catalog(string json = Json) => JsonConvert.DeserializeObject<MissionCatalogConfig>(json);
 
+        [Test] public void Catalog_LoadsWithDataConfigCamelCaseSettings()
+        {
+            var catalog = JsonConvert.DeserializeObject<MissionCatalogConfig>(Json, DataConfigJson.Settings);
+            catalog.Initialize("missionCatalog");
+            Assert.That(catalog.CatalogId, Is.EqualTo("test"));
+            Assert.That(catalog.Missions.Count, Is.EqualTo(2));
+            Assert.That(catalog.Missions[0].Id, Is.EqualTo("wins"));
+        }
+
         [Test] public void Progress_UpdatesAllMatchingMissions_AndCapsWithoutOverflow()
         {
             MissionModel model = new(Catalog(), new Store(), new Wallet());

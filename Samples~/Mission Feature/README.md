@@ -44,3 +44,7 @@ await PanelManager.Instance.Close<MissionPanel>();
 Host giữ một presenter cho mỗi panel instance, dispose lúc teardown, bind/render lại khi mở panel cache. Không chạy đồng thời controller sample và presenter khác trên cùng panel. PanelManager không tự cài service feature.
 
 Build Addressables content cho target trước khi thử player. AssetLoader cache prefab; đóng panel không tự unload cache. Chỉ unload sau khi mọi instance/consumer đã kết thúc.
+
+## Interactive gameplay controls
+
+`Prefabs/MissionDemoPanel.prefab` is a variant of MissionPanel. After Init/PostInit, call Configure(service) on both MissionPanel and MissionDemoControls, then Show. Optional sample controls report stage.win (1) and coin.collect (100), each with a unique event ID. These simulate gameplay events; they do not grant collected coins directly. Claims still pass through the mission service and shared wallet.
