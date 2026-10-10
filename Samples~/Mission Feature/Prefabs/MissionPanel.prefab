@@ -858,9 +858,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1316269333568228854, guid: 58d7c1a38f4e4d83920eff2d9a6de08a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3896902883064450761}
-    - targetCorrespondingSourceObject: {fileID: 1316269333568228854, guid: 58d7c1a38f4e4d83920eff2d9a6de08a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5603717502191737323}
   m_SourcePrefab: {fileID: 100100000, guid: 58d7c1a38f4e4d83920eff2d9a6de08a, type: 3}
 --- !u!1 &3079748105659701258 stripped
 GameObject:
@@ -903,19 +900,6 @@ MonoBehaviour:
   statusText: {fileID: 467262465902807759}
   itemContainer: {fileID: 2092908241073525461}
   itemPrefab: {fileID: 1533647845342229257, guid: fdc0583514cca4bfcbaa49ed942fd524, type: 3}
---- !u!114 &5603717502191737323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3079748105659701258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9207ba7fe4958e654ac31d473fe472be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Dreamy.Feature.Missions.Integration.Runtime::Dreamy.Feature.Missions.Integration.MissionController
-  panel: {fileID: 3896902883064450761}
 --- !u!225 &7156283177868296969 stripped
 CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 6604841990668801781, guid: 58d7c1a38f4e4d83920eff2d9a6de08a, type: 3}

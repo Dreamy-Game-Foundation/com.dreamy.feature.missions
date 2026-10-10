@@ -1,8 +1,17 @@
 {
   "name": "Dreamy.Missions.Runtime",
   "rootNamespace": "Dreamy.Missions",
-  "references": ["Dreamy.Core.Runtime", "Dreamy.DataConfig.Runtime", "Dreamy.Datasave.Runtime", "Dreamy.Economy.Runtime"],
+  "references": [
+    "Dreamy.Core.Runtime",
+    "Dreamy.DataConfig.Runtime",
+    "Dreamy.Datasave.Runtime",
+    "Dreamy.Economy.Runtime",
+    "Dreamy.UI.Presentation"
+  ],
   "overrideReferences": true,
-  "precompiledReferences": ["Newtonsoft.Json.dll"],
-  "autoReferenced": true
+  "precompiledReferences": [
+    "Newtonsoft.Json.dll"
+  ],
+  "autoReferenced": true,
+  "noEngineReferences": true
 }

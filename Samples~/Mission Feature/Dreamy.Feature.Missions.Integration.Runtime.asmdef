@@ -7,6 +7,10 @@
     "Dreamy.UI.Runtime",
     "Unity.TextMeshPro",
     "UnityEngine.UI",
-    "UniTask"
+    "UniTask",
+    "Dreamy.UI.Presentation",
+    "Dreamy.DataConfig.Runtime",
+    "Dreamy.Datasave.Runtime",
+    "Dreamy.Economy.Runtime"
   ]
 }
