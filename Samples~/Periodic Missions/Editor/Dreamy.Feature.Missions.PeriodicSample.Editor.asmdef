@@ -1,0 +1,10 @@
+{
+  "name": "Dreamy.Feature.Missions.PeriodicSample.Editor",
+  "references": [
+    "Dreamy.Feature.Missions.PeriodicSample",
+    "Dreamy.UI.Runtime",
+    "Unity.TextMeshPro",
+    "UnityEngine.UI"
+  ],
+  "includePlatforms": ["Editor"]
+}

@@ -1,5 +1,10 @@
 # Dreamy Missions
 
+Periodic windows, persisted selection/reroll, distinct objectives, and typed
+durable reward claims are documented in
+[`Documentation~/periodic-missions.md`](Documentation~/periodic-missions.md).
+Permanent full-catalog behavior and the legacy wallet constructor remain the default.
+
 Package thuộc Dreamy Game Studio. Hướng dẫn dưới đây mô tả cấu trúc, cách cài vào project và tích hợp ở root/scene.
 
 ## Cài package

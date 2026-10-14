@@ -1,0 +1,48 @@
+{
+  "catalogId": "dreamy-periodic-sample-weekly",
+  "revision": "1",
+  "period": {
+    "period": "Weekly",
+    "offsetMinutes": 420,
+    "cutoffMinutes": 0,
+    "weekStart": "Monday",
+    "freeRerolls": 1
+  },
+  "selection": {
+    "poolId": "weekly",
+    "count": 3,
+    "conflictPolicy": "PreferGroupsThenRelax"
+  },
+  "missions": [
+    { "id": "weekly-win-three", "titleKey": "Win three stages this week", "eventKey": "stage.win", "target": 3, "poolId": "weekly", "conflictGroup": "win",
+      "rewardBundle": { "schemaVersion": 1, "resolverVersion": "periodic-demo-v1", "entries": [
+        { "entryId": "coins", "kindId": "currency", "targetId": "currency.coin", "amount": 100 },
+        { "entryId": "demo-token", "kindId": "demo.periodic-item", "targetId": "demo.periodic-token", "amount": 5 }
+      ] } },
+    { "id": "weekly-win-five", "titleKey": "Win five stages this week", "eventKey": "stage.win", "target": 5, "poolId": "weekly", "conflictGroup": "win",
+      "rewardBundle": { "schemaVersion": 1, "resolverVersion": "periodic-demo-v1", "entries": [
+        { "entryId": "coins", "kindId": "currency", "targetId": "currency.coin", "amount": 150 },
+        { "entryId": "demo-token", "kindId": "demo.periodic-item", "targetId": "demo.periodic-token", "amount": 7 }
+      ] } },
+    { "id": "weekly-win-ten", "titleKey": "Win ten stages this week", "eventKey": "stage.win", "target": 10, "poolId": "weekly", "conflictGroup": "win",
+      "rewardBundle": { "schemaVersion": 1, "resolverVersion": "periodic-demo-v1", "entries": [
+        { "entryId": "coins", "kindId": "currency", "targetId": "currency.coin", "amount": 250 },
+        { "entryId": "demo-token", "kindId": "demo.periodic-item", "targetId": "demo.periodic-token", "amount": 10 }
+      ] } },
+    { "id": "weekly-collect-three-hundred", "titleKey": "Collect 300 coins this week (simulated)", "eventKey": "coin.collect", "target": 300, "poolId": "weekly", "conflictGroup": "collect",
+      "rewardBundle": { "schemaVersion": 1, "resolverVersion": "periodic-demo-v1", "entries": [
+        { "entryId": "coins", "kindId": "currency", "targetId": "currency.coin", "amount": 100 },
+        { "entryId": "demo-token", "kindId": "demo.periodic-item", "targetId": "demo.periodic-token", "amount": 5 }
+      ] } },
+    { "id": "weekly-collect-five-hundred", "titleKey": "Collect 500 coins this week (simulated)", "eventKey": "coin.collect", "target": 500, "poolId": "weekly", "conflictGroup": "collect",
+      "rewardBundle": { "schemaVersion": 1, "resolverVersion": "periodic-demo-v1", "entries": [
+        { "entryId": "coins", "kindId": "currency", "targetId": "currency.coin", "amount": 150 },
+        { "entryId": "demo-token", "kindId": "demo.periodic-item", "targetId": "demo.periodic-token", "amount": 7 }
+      ] } },
+    { "id": "weekly-collect-thousand", "titleKey": "Collect 1000 coins this week (simulated)", "eventKey": "coin.collect", "target": 1000, "poolId": "weekly", "conflictGroup": "collect",
+      "rewardBundle": { "schemaVersion": 1, "resolverVersion": "periodic-demo-v1", "entries": [
+        { "entryId": "coins", "kindId": "currency", "targetId": "currency.coin", "amount": 250 },
+        { "entryId": "demo-token", "kindId": "demo.periodic-item", "targetId": "demo.periodic-token", "amount": 10 }
+      ] } }
+  ]
+}

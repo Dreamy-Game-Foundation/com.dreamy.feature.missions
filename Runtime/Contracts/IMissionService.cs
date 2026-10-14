@@ -8,7 +8,13 @@ namespace Dreamy.Missions
         event Action StateChanged;
         IReadOnlyList<MissionState> GetState();
         MissionProgressStatus ReportProgress(string eventKey, string eventId, long amount = 1);
+        MissionProgressStatus ReportProgress(string eventKey, string eventId, string eventNamespace,
+            string windowId, long amount = 1, string distinctValue = null);
         MissionClaimStatus Claim(string missionId);
+        MissionRefreshStatus Refresh();
+        MissionRerollStatus Reroll(string missionId);
+        MissionClaimStatus RecoverClaims();
+        string WindowId { get; }
     }
 
     public interface IMissionView
@@ -20,8 +26,10 @@ namespace Dreamy.Missions
         void Close();
     }
 
-    public enum MissionProgressStatus { Updated, AlreadyProcessed, InvalidEvent, NoMatchingMission, Busy }
-    public enum MissionClaimStatus { Claimed, AlreadyClaimed, NotComplete, UnknownMission, GrantFailed, Busy }
+    public enum MissionProgressStatus { Updated, AlreadyProcessed, InvalidEvent, NoMatchingMission, Busy, WrongWindow }
+    public enum MissionClaimStatus { Claimed, AlreadyClaimed, NotComplete, UnknownMission, GrantFailed, Busy, Pending }
+    public enum MissionRefreshStatus { Unchanged, Updated, Busy }
+    public enum MissionRerollStatus { Rerolled, UnknownMission, Ineligible, LimitReached, NoCandidate, Busy }
 
     public readonly struct MissionState
     {

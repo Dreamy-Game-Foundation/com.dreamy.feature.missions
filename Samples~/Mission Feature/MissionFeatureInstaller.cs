@@ -2,6 +2,7 @@ using System;
 using Dreamy.DataConfig;
 using Dreamy.Datasave;
 using Dreamy.Economy;
+using Dreamy.Economy.Rewards;
 using Dreamy.Missions;
 using Dreamy.UI;
 
@@ -23,6 +24,14 @@ namespace Dreamy.Feature.Missions.Integration
             if (service == null) throw new ArgumentNullException(nameof(service));
             factory.Register<MissionPanel>(view => new MissionPresenter(service, view));
             return service;
+        }
+
+        public static IMissionService Install(PanelPresenterFactory factory, MissionCatalogConfig config,
+            IDatasaveService save, IRewardDeliveryGateway gateway, string saveKey = "missions",
+            IMissionClock clock = null, IMissionRandom random = null)
+        {
+            if (factory == null) throw new ArgumentNullException(nameof(factory));
+            return Install(factory, MissionInstaller.Install(config, save, gateway, saveKey, clock, random));
         }
     }
 }

@@ -1,0 +1,48 @@
+{
+  "catalogId": "dreamy-periodic-sample-daily",
+  "revision": "1",
+  "period": {
+    "period": "Daily",
+    "offsetMinutes": 420,
+    "cutoffMinutes": 0,
+    "weekStart": "Monday",
+    "freeRerolls": 1
+  },
+  "selection": {
+    "poolId": "daily",
+    "count": 3,
+    "conflictPolicy": "PreferGroupsThenRelax"
+  },
+  "missions": [
+    { "id": "daily-win-one", "titleKey": "Win a stage", "eventKey": "stage.win", "target": 1, "poolId": "daily", "conflictGroup": "win",
+      "rewardBundle": { "schemaVersion": 1, "resolverVersion": "periodic-demo-v1", "entries": [
+        { "entryId": "coins", "kindId": "currency", "targetId": "currency.coin", "amount": 10 },
+        { "entryId": "demo-token", "kindId": "demo.periodic-item", "targetId": "demo.periodic-token", "amount": 1 }
+      ] } },
+    { "id": "daily-win-three", "titleKey": "Win three stages", "eventKey": "stage.win", "target": 3, "poolId": "daily", "conflictGroup": "win",
+      "rewardBundle": { "schemaVersion": 1, "resolverVersion": "periodic-demo-v1", "entries": [
+        { "entryId": "coins", "kindId": "currency", "targetId": "currency.coin", "amount": 30 },
+        { "entryId": "demo-token", "kindId": "demo.periodic-item", "targetId": "demo.periodic-token", "amount": 2 }
+      ] } },
+    { "id": "daily-collect-hundred", "titleKey": "Collect 100 coins (simulated)", "eventKey": "coin.collect", "target": 100, "poolId": "daily", "conflictGroup": "collect",
+      "rewardBundle": { "schemaVersion": 1, "resolverVersion": "periodic-demo-v1", "entries": [
+        { "entryId": "coins", "kindId": "currency", "targetId": "currency.coin", "amount": 15 },
+        { "entryId": "demo-token", "kindId": "demo.periodic-item", "targetId": "demo.periodic-token", "amount": 1 }
+      ] } },
+    { "id": "daily-collect-three-hundred", "titleKey": "Collect 300 coins (simulated)", "eventKey": "coin.collect", "target": 300, "poolId": "daily", "conflictGroup": "collect",
+      "rewardBundle": { "schemaVersion": 1, "resolverVersion": "periodic-demo-v1", "entries": [
+        { "entryId": "coins", "kindId": "currency", "targetId": "currency.coin", "amount": 40 },
+        { "entryId": "demo-token", "kindId": "demo.periodic-item", "targetId": "demo.periodic-token", "amount": 2 }
+      ] } },
+    { "id": "daily-win-five", "titleKey": "Win five stages", "eventKey": "stage.win", "target": 5, "poolId": "daily", "conflictGroup": "win",
+      "rewardBundle": { "schemaVersion": 1, "resolverVersion": "periodic-demo-v1", "entries": [
+        { "entryId": "coins", "kindId": "currency", "targetId": "currency.coin", "amount": 50 },
+        { "entryId": "demo-token", "kindId": "demo.periodic-item", "targetId": "demo.periodic-token", "amount": 3 }
+      ] } },
+    { "id": "daily-collect-five-hundred", "titleKey": "Collect 500 coins (simulated)", "eventKey": "coin.collect", "target": 500, "poolId": "daily", "conflictGroup": "collect",
+      "rewardBundle": { "schemaVersion": 1, "resolverVersion": "periodic-demo-v1", "entries": [
+        { "entryId": "coins", "kindId": "currency", "targetId": "currency.coin", "amount": 60 },
+        { "entryId": "demo-token", "kindId": "demo.periodic-item", "targetId": "demo.periodic-token", "amount": 3 }
+      ] } }
+  ]
+}

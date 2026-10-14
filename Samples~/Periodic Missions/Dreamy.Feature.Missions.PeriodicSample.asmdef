@@ -1,0 +1,16 @@
+{
+  "name": "Dreamy.Feature.Missions.PeriodicSample",
+  "rootNamespace": "Dreamy.Feature.Missions.PeriodicSample",
+  "references": [
+    "Dreamy.Missions.Runtime",
+    "Dreamy.UI.Runtime",
+    "Dreamy.UI.Presentation",
+    "Dreamy.DataConfig.Runtime",
+    "Dreamy.Datasave.Runtime",
+    "Dreamy.Economy.Runtime",
+    "Unity.TextMeshPro",
+    "UnityEngine.UI",
+    "UniTask",
+    "Unity.Newtonsoft.Json"
+  ]
+}

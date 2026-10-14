@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 using Dreamy.Missions;
 using TMPro;
 using UnityEngine;
@@ -22,7 +23,18 @@ namespace Dreamy.Feature.Missions.Integration
             missionId = state.Definition.Id;
             titleText.text = state.Definition.TitleKey;
             progressText.text = $"{state.Progress} / {state.Definition.Target}";
-            rewardText.text = $"+{state.Definition.RewardAmount} {state.Definition.RewardResourceId}";
+            if (state.Definition.RewardBundle == null)
+                rewardText.text = $"+{state.Definition.RewardAmount} {state.Definition.RewardResourceId}";
+            else
+            {
+                var text = new StringBuilder();
+                foreach (var entry in state.Definition.RewardBundle.Entries)
+                {
+                    if (text.Length > 0) text.Append('\n');
+                    text.Append('+').Append(entry.Amount).Append(' ').Append(entry.TargetId);
+                }
+                rewardText.text = text.ToString();
+            }
             claimButton.interactable = state.CanClaim;
             claimLabel.text = state.IsClaimed ? "Claimed" : state.IsComplete ? "Claim" : "In progress";
         }
