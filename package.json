@@ -1,21 +1,31 @@
 {
   "name": "com.dreamy.feature.missions",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "displayName": "Dreamy Missions",
   "description": "Persistent one-time counter missions with explicit progress events and claimable economy rewards.",
   "unity": "6000.0",
   "license": "UNLICENSED",
-  "author": { "name": "Dreamy Game Studio" },
+  "author": {
+    "name": "Dreamy Game Studio"
+  },
   "dependencies": {
     "com.dreamy.core": "1.1.2",
-    "com.dreamy.feature": "0.1.0",
+    "com.dreamy.feature": "0.2.0",
     "com.dreamy.dataconfig": "0.2.0",
     "com.dreamy.datasave": "0.2.0",
-    "com.dreamy.feature.economy": "0.1.0",
+    "com.dreamy.feature.economy": "0.3.0",
     "com.unity.nuget.newtonsoft-json": "3.2.1"
   },
   "samples": [
-    { "displayName": "Mission Feature", "description": "Permanent mission panel, item prefab and example catalog. Requires Dreamy UI.", "path": "Samples~/Mission Feature" },
-    { "displayName": "Periodic Missions", "description": "Opt-in daily selection/reroll catalog. Import the shared Mission Feature UI first.", "path": "Samples~/Periodic Missions" }
+    {
+      "displayName": "Mission Feature",
+      "description": "Permanent mission panel, item prefab and example catalog. Requires Dreamy UI.",
+      "path": "Samples~/Mission Feature"
+    },
+    {
+      "displayName": "Periodic Missions",
+      "description": "Opt-in daily selection/reroll catalog. Import the shared Mission Feature UI first.",
+      "path": "Samples~/Periodic Missions"
+    }
   ]
 }

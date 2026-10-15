@@ -2,6 +2,7 @@
   "name": "Dreamy.Missions.Runtime",
   "rootNamespace": "Dreamy.Missions",
   "references": [
+    "Dreamy.Feature.Runtime",
     "Dreamy.Core.Runtime",
     "Dreamy.DataConfig.Runtime",
     "Dreamy.Datasave.Runtime",

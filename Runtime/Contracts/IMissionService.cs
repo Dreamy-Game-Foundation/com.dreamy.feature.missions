@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Dreamy.Feature;
 
 namespace Dreamy.Missions
 {
@@ -17,11 +18,10 @@ namespace Dreamy.Missions
         string WindowId { get; }
     }
 
-    public interface IMissionView
+    public interface IMissionView : IFeatureView<IReadOnlyList<MissionState>>
     {
         event Action<string> ClaimRequested;
         event Action CloseRequested;
-        void Render(IReadOnlyList<MissionState> state);
         void ShowClaimResult(MissionClaimStatus result);
         void Close();
     }

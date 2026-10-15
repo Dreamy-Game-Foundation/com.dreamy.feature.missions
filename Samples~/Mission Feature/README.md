@@ -43,19 +43,27 @@ Factory tạo một presenter cho mỗi lần mở và host chung cleanup khi đ
 
 Build Addressables content cho target trước khi thử player. AssetLoader cache prefab; đóng panel không tự unload cache. Chỉ unload sau khi mọi instance/consumer đã kết thúc.
 
-## Production integration and presenter lifecycle
+## Tích hợp vào game và vòng đời presenter
 
-The editable integration entry point is `MissionFeatureInstaller` in Samples~. Runtime `MissionInstaller` remains available for custom UI; games using the supplied views call only the feature installer. All presenters implement the engine-independent `IPanelPresenter` lifecycle in `Dreamy.UI.Presentation`.
+Điểm tích hợp có thể chỉnh sửa là `MissionFeatureInstaller` trong Samples~. Runtime `MissionInstaller` vẫn dành cho UI tự viết; game dùng view đi kèm chỉ gọi feature installer. Các presenter triển khai vòng đời `IPanelPresenter` độc lập engine trong `Dreamy.UI.Presentation`.
 
 ```csharp
-MissionFeatureInstaller.RegisterConfig(dataConfig); // Before dataConfig.InitializeAsync.
-// After config/save/wallet readiness, using the same factory as other features:
+MissionFeatureInstaller.RegisterConfig(dataConfig); // Trước dataConfig.InitializeAsync.
+// Sau khi config/save/wallet sẵn sàng, dùng factory chung của các tính năng:
 MissionFeatureInstaller.Install(factory, config, save, wallet);
-// Or reuse a host-owned service: MissionFeatureInstaller.Install(factory, service);
+// Hoặc dùng lại service do game sở hữu: MissionFeatureInstaller.Install(factory, service);
 ```
 
-Dependencies in this example belong to the composition root. No installer creates an in-memory wallet/save fallback. Model/service own rewards and checkpoints; views only render state and emit intent. Add direct asmdef references to the integration assembly and Dreamy.UI.Presentation wherever their APIs are used.
+Các dependency trong ví dụ do composition root sở hữu. Installer không tự tạo wallet/save trong bộ nhớ để dự phòng. Model/service quản lý reward và checkpoint; view chỉ render trạng thái và gửi yêu cầu. Thêm reference trực tiếp tới assembly tích hợp và Dreamy.UI.Presentation tại nơi dùng API tương ứng.
 
-After assigning the shared factory to the scene's PanelManager, any caller can open `MissionPanel` with Show/Transition by address, or Show with a prefab. Each opening creates one presenter; close, disable, destroy or failed show release it. Cached reopen creates a fresh presenter. No per-feature controller is required.
+Sau khi gán factory chung cho PanelManager của scene, mở `MissionPanel` bằng Show/Transition theo address hoặc Show bằng prefab. Mỗi lần mở tạo một presenter; đóng, disable, destroy hoặc Show lỗi sẽ giải phóng presenter. Mở lại panel cache tạo presenter mới; không cần controller riêng cho từng tính năng.
 
-Sandbox validation: `python3 LocalPackages/com.dreamy.feature.settings/Tests~/validate-settings.py --shop --features`. This compiles runtime/integration/sample assemblies against their declared references and runs pure managed model/presenter regressions. Unity scene/coroutine/raycast lifecycle still requires Editor/PlayMode validation.
+Lệnh kiểm chứng sandbox: `python3 LocalPackages/com.dreamy.feature.settings/Tests~/validate-settings.py --shop --features`. Lệnh compile các assembly runtime/tích hợp/sample theo reference đã khai báo và chạy regression model/presenter bằng managed code. Scene, coroutine, raycast và vòng đời Unity vẫn cần kiểm chứng Editor/PlayMode.
+
+## Contract Feature dùng chung
+
+Presenter kế thừa `Dreamy.Feature.FeaturePresenter`; view dùng
+`IFeatureView<TState>` qua interface riêng của tính năng. Thêm reference trực tiếp
+`Dreamy.Feature.Runtime` trong asmdef tích hợp; source và bản import đi kèm đã có
+reference này. Show/Dispose vẫn quản lý vòng đời presenter; quyền sở hữu điều kiện
+nhận thưởng, save và reward không thay đổi.

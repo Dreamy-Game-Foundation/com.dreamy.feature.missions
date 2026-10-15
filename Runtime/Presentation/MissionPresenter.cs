@@ -1,34 +1,27 @@
 using System;
+using Dreamy.Feature;
 using Dreamy.UI;
 
 namespace Dreamy.Missions
 {
-    public sealed class MissionPresenter : IPanelPresenter
+    public sealed class MissionPresenter : FeaturePresenter, IPanelPresenter
     {
         private readonly IMissionService service;
         private readonly IMissionView view;
-        private bool bound;
         public MissionPresenter(IMissionService service, IMissionView view)
         { this.service = service ?? throw new ArgumentNullException(nameof(service)); this.view = view ?? throw new ArgumentNullException(nameof(view)); }
-        public void Show()
+        protected override void Bind()
         {
-            if (!bound)
-            {
-                service.StateChanged += Refresh;
-                view.ClaimRequested += Claim;
-                view.CloseRequested += Close;
-                bound = true;
-            }
-            Refresh();
+            service.StateChanged += Refresh;
+            view.ClaimRequested += Claim;
+            view.CloseRequested += Close;
         }
-        public void Refresh() => view.Render(service.GetState());
-        public void Dispose()
+        public override void Refresh() => view.Render(service.GetState());
+        protected override void Unbind()
         {
-            if (!bound) return;
             service.StateChanged -= Refresh;
             view.ClaimRequested -= Claim;
             view.CloseRequested -= Close;
-            bound = false;
         }
         private void Claim(string id)
         {

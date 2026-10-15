@@ -2,6 +2,7 @@
   "name": "Dreamy.Feature.Missions.PeriodicSample",
   "rootNamespace": "Dreamy.Feature.Missions.PeriodicSample",
   "references": [
+    "Dreamy.Feature.Runtime",
     "Dreamy.Missions.Runtime",
     "Dreamy.UI.Runtime",
     "Dreamy.UI.Presentation",

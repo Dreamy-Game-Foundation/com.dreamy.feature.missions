@@ -1,31 +1,24 @@
 # Periodic Missions
 
-Import **Periodic Missions** by itself from Package Manager. It does not use
-Mission Feature scripts, prefab, Resources catalog, or installer. Both samples
-can coexist: this assembly and namespace are `Dreamy.Feature.Missions.PeriodicSample`.
-The original Permanent sample remains independent.
+Import riêng Periodic Missions từ Package Manager. Sample không dùng script,
+prefab, catalog Resources hoặc installer của Mission Feature. Hai sample có thể
+cùng tồn tại; assembly/namespace riêng là Dreamy.Feature.Missions.PeriodicSample.
+Sample Permanent cũ vẫn độc lập.
 
-The two serialized TextAssets are `periodicDailyMissionCatalog.json` and
-`periodicWeeklyMissionCatalog.json`. Do not copy them into Resources/DataConfig
-or replace the Permanent catalog. Each selects three of six missions, with one
-free reroll per window. Both explicitly use `PreferGroupsThenRelax`. These demo
-policies use UTC+7, midnight cutoff, and Monday week start; these are catalog
-choices, not timer rules. Every reward is a currency + clearly labeled fake-item
-bundle, delivered in that order.
+Hai TextAsset là periodicDailyMissionCatalog.json và periodicWeeklyMissionCatalog.json.
+Không chép vào Resources/DataConfig hoặc thay catalog Permanent. Mỗi catalog chọn
+3 trong 6 nhiệm vụ, một free reroll mỗi kỳ, với PreferGroupsThenRelax. Policy demo
+là UTC+7, cutoff midnight và tuần bắt đầu Monday; đây là lựa chọn catalog, không
+phải luật của timer UI. Bundle giao currency trước rồi item demo được ghi nhãn rõ.
 
-## Composition and opening
+## Ghép dependency và mở sample
 
-The host supplies its initialized `IDatasaveService`, `IRewardDeliveryGateway`,
-and `IMissionClock`. Nothing creates a save service, wallet, backend, or global
-service registry. The composition controller accepts dependencies explicitly:
+Game cung cấp IDatasaveService, IRewardDeliveryGateway và IMissionClock đã sẵn sàng.
+Sample không tự tạo wallet, save, backend hoặc registry toàn cục. Gọi
+controller.Configure(save, gateway, clock) một lần.
 
-```csharp
-controller.Configure(save, gateway, clock);
-```
-
-For the supplied fake-item component, configure it **before** constructing mission
-models, because model construction resumes saved deliveries. A host method with
-an existing strict Economy wallet can compose the actual Economy gateway:
+Cấu hình fake-item component trước khi dựng model vì constructor sẽ recovery
+pending delivery đã lưu. Ví dụ dùng strict wallet có sẵn của game:
 
 ```csharp
 using Dreamy.Datasave;
@@ -48,140 +41,112 @@ void OpenPeriodicDemo(GameObject inactiveInstance, IDatasaveService save,
 }
 ```
 
-Instantiate the configured prefab under an existing Canvas with an EventSystem.
-Keep the prefab root inactive during instantiation/configuration. All serialized
-references below must already be assigned. Configure a given controller and item
-destination once, not each time it opens. Close deactivates the root; reopen that
-same instance with `instance.SetActive(true)`. Destroying it requires instantiating
-and configuring a new instance. Preserve the host's gateway/owners for as long as
-the models can be used.
+Đặt prefab dưới Canvas có EventSystem. Giữ root inactive khi instantiate/configure,
+gán đầy đủ reference rồi mới bật. Controller/item destination chỉ Configure một lần.
+Đóng sẽ tắt root; mở lại cùng instance bằng SetActive(true). Destroy thì phải tạo
+và cấu hình instance mới. Gateway và owner của game sống lâu bằng model sử dụng nó.
 
-This sample owns `MissionPresenter` directly and uses the standalone activation
-lifecycle. Do not register a second presenter in `PanelPresenterFactory`, or open
-this instance through `PanelManager.Show`, `UIPanel.Show` or `UIPanel.Hide`.
-`UIPanel` inheritance supplies the expected panel component shape; close/reopen
-here is deliberately driven by root activation. If integrating into a managed
-panel navigation flow, adapt that lifecycle rather than binding two presenters.
+Sample tự sở hữu MissionPresenter và dùng lifecycle bật/tắt root. Không đăng ký
+presenter thứ hai vào factory hoặc mở instance này qua PanelManager.Show,
+UIPanel.Show/Hide. Kế thừa UIPanel chỉ cung cấp hình dạng component; khi tích hợp
+navigation có quản lý, phải thay lifecycle tương ứng để không bind hai presenter.
 
-Save keys are intentionally distinct from Permanent and from one another:
+Save key tách biệt:
 
-- `dreamy.periodic-sample.daily.v1`
-- `dreamy.periodic-sample.weekly.v1`
-- `dreamy.periodic-sample.demo-items.v1`
+- dreamy.periodic-sample.daily.v1
+- dreamy.periodic-sample.weekly.v1
+- dreamy.periodic-sample.demo-items.v1
 
-Use one configured demo instance per save lineage. The host owns the wallet save
-key and must not run a second independent wallet owner over the same document.
-Changing catalog identity, period policy, or an incompatible active revision
-requires explicit migration, not a new save key to hide the old state.
+Một demo instance cho mỗi save lineage. Game sở hữu wallet save key; không chạy
+wallet thứ hai cùng ghi document. Thay catalog ID, period policy hoặc revision
+không tương thích cần migration, không đổi save key để che state cũ.
 
-## Exact prefab/component wiring
+## Gán prefab và component
 
-Create `PeriodicMissionDemoPanel` as an inactive RectTransform root under a Canvas.
-Put `CanvasGroup`, `PeriodicMissionPanel`, `PeriodicMissionDemoController`, and
-`DemoPeriodicItemDestination` on this same root. A `UITweenPlayer` is not needed
-for this standalone activation flow. Assign inherited `canvasGroup` to the root
-CanvasGroup; leave inherited `tweenPlayer` empty. Add a child ScrollRect/viewport
-and a vertical layout content Transform; the content starts empty.
+Tạo root RectTransform inactive tên PeriodicMissionDemoPanel dưới Canvas. Gắn
+CanvasGroup, PeriodicMissionPanel, PeriodicMissionDemoController và
+DemoPeriodicItemDestination trên cùng root. Không cần UITweenPlayer cho luồng này;
+gán canvasGroup của base tới CanvasGroup root và để tweenPlayer trống. Thêm
+ScrollRect/viewport và content vertical layout rỗng.
 
-`PeriodicMissionPanel` serialized fields (all required):
+Các field bắt buộc của PeriodicMissionPanel:
 
-| Field | Component / role |
+| Field | Component / vai trò |
 | --- | --- |
-| `closeButton` | Button labeled Close |
-| `dailyTabButton` | Button labeled Daily |
-| `weeklyTabButton` | Button labeled Weekly |
-| `winButton` | Button labeled Simulate win +1 |
-| `collectButton` | Button labeled Simulate collect +100 |
-| `retryButton` | Button labeled Retry pending (both tabs) |
-| `refreshButton` | Button labeled Refresh windows |
-| `headingText` | TMP_Text for selected tab heading |
-| `countdownText` | TMP_Text for reset countdown |
-| `rerollText` | TMP_Text for remaining free reroll |
-| `statusText` | TMP_Text with room for wrapping delivery/error details |
-| `itemContainer` | Empty vertical content Transform in ScrollRect |
-| `itemPrefab` | PeriodicMissionItem component on the row prefab asset |
+| closeButton | Nút Close |
+| dailyTabButton / weeklyTabButton | Nút Daily / Weekly |
+| winButton | Nút Simulate win +1 |
+| collectButton | Nút Simulate collect +100 |
+| retryButton | Nút Retry pending cho cả hai tab |
+| refreshButton | Nút Refresh windows |
+| headingText | TMP_Text tiêu đề tab |
+| countdownText | TMP_Text thời gian còn lại |
+| rerollText | TMP_Text free reroll còn lại |
+| statusText | TMP_Text đủ chỗ xuống dòng cho reason/lỗi |
+| itemContainer | Content Transform vertical rỗng trong ScrollRect |
+| itemPrefab | Component PeriodicMissionItem trên prefab dòng |
 
-Create a separate active row prefab named `PeriodicMissionItem`, with
-`PeriodicMissionItem` on its RectTransform root. It is not a preplaced content
-row. Give it enough height for two reward lines and a wrapping title.
+Tạo prefab dòng active riêng tên PeriodicMissionItem, đặt component cùng tên trên
+root RectTransform; không đặt sẵn row trong content. Để đủ chiều cao cho hai dòng
+reward và title xuống dòng.
 
-| Row field | Component / role |
+| Field dòng | Component / vai trò |
 | --- | --- |
-| `titleText` | TMP_Text mission title |
-| `progressText` | TMP_Text progress / target |
-| `rewardText` | TMP_Text currency and DEMO item lines |
-| `claimLabel` | TMP_Text child label of claimButton |
-| `claimButton` | Button for Claim / Retry |
-| `rerollButton` | Button labeled Free reroll |
+| titleText | TMP_Text tiêu đề nhiệm vụ |
+| progressText | TMP_Text progress / target |
+| rewardText | TMP_Text currency và item DEMO |
+| claimLabel | TMP_Text con của claimButton |
+| claimButton | Nút Claim / Retry |
+| rerollButton | Nút Free reroll |
 
-`PeriodicMissionDemoController` fields:
+PeriodicMissionDemoController nhận dailyCatalog/weeklyCatalog là hai TextAsset trên,
+field panel trỏ tới PeriodicMissionPanel cùng root.
+DemoPeriodicItemDestination nhận pauseDeliveriesToggle (pause/Pending),
+rejectDeliveriesToggle (reject/Error), cả hai ban đầu off; balanceText là TMP_Text
+số token demo đang có.
 
-| Field | Reference |
-| --- | --- |
-| `dailyCatalog` | periodicDailyMissionCatalog.json TextAsset |
-| `weeklyCatalog` | periodicWeeklyMissionCatalog.json TextAsset |
-| `panel` | PeriodicMissionPanel on the same root |
+Để trống persistent events của Button.onClick/Toggle.onValueChanged. Source tự
+subscribe button và đọc toggle. Gán anchors/safe area, dùng layout/scroll thay vì
+vị trí row cố định. Source không tự tạo/sửa prefab hay tìm reference theo tên.
 
-`DemoPeriodicItemDestination` fields:
+## Hành vi và kiểm tra thủ công
 
-| Field | Reference |
-| --- | --- |
-| `pauseDeliveriesToggle` | Toggle labeled DEMO: pause item delivery (Pending); initially off |
-| `rejectDeliveriesToggle` | Toggle labeled DEMO: reject item delivery (Error); initially off |
-| `balanceText` | TMP_Text displaying DEMO tokens owned |
+Đổi Daily/Weekly dispose presenter cũ trước khi bind model mới. Disable giải phóng
+presenter/button listener, enable bind lại một lần. Row được tái sử dụng theo state,
+không dựng lại mỗi frame. Timer chỉ so whole UTC second từ clock inject; khi giây
+đổi mới Refresh model đang hiện và đọc Window snapshot. Text chỉ đổi khi giây/kỳ
+hiển thị đổi. Timer không xoá progress/claim/selection/reroll. Model ẩn refresh khi
+được chọn hoặc qua thao tác demo/Refresh rõ ràng.
 
-Leave Button.onClick and Toggle.onValueChanged persistent event lists empty.
-Buttons are subscribed by the sample source; the fake destination reads toggle
-values directly. Give the root suitable anchors/safe-area containment and use
-layout/scrolling rather than fixed row positions. The source does not generate
-or repair a prefab, locate controls by name, or create missing references.
+Win/collect giả lập phát event ID duy nhất theo window cho cả hai model. Collect
+chỉ tăng mission progress, không cộng 100 coin vào wallet. Game dùng business event
+thật và giữ context window gốc khi replay. Sample không phát objective distinct-value.
 
-## Behavior and manual QA
+1. Reroll dòng chưa hoàn tất: lần tiếp theo trong cùng tab/kỳ bị chặn. Đổi tab kiểm
+   selection/reroll độc lập.
+2. Giả lập đủ win/collect, claim và quan sát wallet cùng token demo.
+3. Bật pause trước claim: currency có thể lưu trước, item Pending. Tắt pause rồi
+   Retry pending để recovery cùng bundle, kể cả old-window, không cộng coin lần hai.
+4. Bật reject ở claim khác để xem lỗi; tắt trước retry. Nếu cả hai cờ bật, reject ưu tiên.
+5. Đóng/mở và đổi tab lặp: mỗi click chỉ có một action/claim. Restart cùng lineage
+   phải giữ selected IDs, progress, claim, receipt và reroll.
+6. Inject clock kiểm soát, vượt cuối kỳ rồi Refresh hoặc chờ giây UI kế tiếp.
+   Chỉ domain Refresh rollover; quay clock về trước không mở lại kỳ cũ.
+7. Kiểm tỷ lệ hẹp/rộng, safe area, xuống dòng, scroll, raycast, missing scripts và
+   Profiler khi countdown chạy; row không tăng liên tục.
 
-Daily/Weekly changes dispose the old presenter before binding the other model.
-Disable releases the presenter and button listeners; enable binds once again.
-Rows are pooled and updated on presenter state changes, not rebuilt each frame.
-The only per-frame timer work is reading the injected clock and comparing its
-whole UTC second. Once that changes, the visible model receives `Refresh` and
-the countdown reads its immutable `Window` snapshot. Countdown text changes
-only when the displayed remaining second/window changes. The timer never
-clears progress, claims, selection, or reroll counts. Hidden models refresh
-when selected or when a demo action/explicit refresh touches them.
+Fake destination chỉ hỗ trợ kind demo.periodic-item và target demo.periodic-token.
+Validate combined amount và fingerprint; token + receipt lưu cùng candidate.
+Receipt không prune. Đây chỉ là demo local, không phải inventory/backend tổng quát.
+Delivery recovery/idempotent theo owner/save lineage, không atomic toàn bundle.
+Giữ journal và owner save cùng generation; restore riêng có thể cần reconciliation.
 
-Simulated win and collect emit unique, window-scoped demo events to both models.
-Collect is progress only: it does not grant 100 coins to the wallet. Use actual
-trusted business events in a game, retaining original event/window context for
-replays. The sample does not generate distinct-value objectives.
+Named timezone/DST, reroll trả phí/quảng cáo, backend anti-cheat, inventory SDK và
+xử lý lỗi production nằm ngoài sample. Review source không thay chứng cứ compile,
+import, visual hay runtime/lifetime QA.
 
-Rehearse these on the actual wired prefab:
+## Contract Feature dùng chung
 
-1. Reroll an incomplete row for free; another attempt in that tab/window is
-   disabled. Switch tabs and confirm independent selection/reroll state.
-2. Simulate enough wins/collects to complete a mission. Its bundle shows coins
-   and DEMO tokens. Claim and observe the host wallet plus demo token count.
-3. Enable pause before a new claim. Currency may commit first, while the item
-   remains Pending. Disable pause and press Retry pending; the persisted bundle
-   resumes without granting currency twice. This also retries old-window claims.
-4. Enable reject on another new claim to display GrantFailed/error details;
-   disable it before manually retrying. If both toggles are on, reject wins.
-5. Close/reopen and repeatedly switch tabs: a click must cause one progress
-   action/claim, not duplicate subscriptions. Restart with the same save lineage
-   and confirm selected IDs, progress, claims, demo receipts and rerolls persist.
-6. Inject a controlled `IMissionClock`, move it past a daily/weekly end, then
-   click Refresh or let its next displayed second tick. Only domain Refresh
-   chooses rollover. Move time backward: an old window must not reopen.
-7. Check narrow/wide ratios, safe area, wrapping, scroll reachability, raycasts,
-   missing references/scripts, and countdown without row churn in the Profiler.
-
-The fake destination supports only kind `demo.periodic-item` and target
-`demo.periodic-token`. It validates combined amounts and receipt fingerprints,
-and writes token count plus transaction receipt in the same save candidate.
-Its receipts are deliberately never pruned. It is demo-only local storage, not
-a general inventory or backend. Bundle delivery is recoverable and idempotent
-under owner/save-lineage contracts, not an atomic all-or-nothing bundle.
-Retain mission journals and destination saves together; independent backup
-rollback can require reconciliation.
-
-Named time zones/DST, paid/ad rerolls, backend anti-cheat, inventory SDKs, and
-production error remediation are outside this sample. Source inspection alone
-does not establish Unity compilation, import, visual, or runtime/lifetime QA.
+MissionPresenter kế thừa FeaturePresenter, view dùng IFeatureView<TState> qua
+IMissionView. Tham chiếu trực tiếp Dreamy.Feature.Runtime trong asmdef tích hợp;
+source và bản import đã có. Không đổi quyền sở hữu eligibility/save/reward.
