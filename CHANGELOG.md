@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased — 0.3.0 candidate
+
+- Add optional IMissionClaimOffers and an engine-independent MissionRewardClaimSource. Bind confirmations to original window/mission/reroll/revision/payload, preserve old pending/completed query, and reject stale unstarted offers. Existing Claim API/save schema remains unchanged.
+- New presentation integration requires Economy 0.7.0 and UniTask; release pins must be updated together.
+
 ## Unreleased
 
 - Add opt-in Daily/Weekly fixed-offset windows, injected clock/RNG, persisted revision snapshots and rollback high-water.

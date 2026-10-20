@@ -13,6 +13,31 @@ namespace Dreamy.Missions.Tests
 {
     public sealed class MissionPeriodicTests
     {
+        [Test] public void ClaimOffer_OldWindowCannotConsumeCurrentMission()
+        {
+            var store=new Store();var clock=new Clock();var gateway=new Gateway(store);var model=Model(Config(),store,gateway,clock);
+            model.ReportProgress("act","complete","game",model.WindowId,3);
+            var offer=model.GetClaimOffer("a");Assert.That(offer,Is.Not.Null);
+            clock.UtcNow=clock.UtcNow.AddDays(1);
+            Assert.That(model.ClaimOffer("a",offer.Token,offer.Fingerprint),Is.EqualTo(MissionClaimStatus.UnknownMission));
+            Assert.That(model.GetClaimOffer("a",offer.Token),Is.Null);
+        }
+        [Test] public void ClaimOffer_QueryRetainsCompletedOriginalWindow()
+        {
+            var store=new Store();var clock=new Clock();var gateway=new Gateway(store);var model=Model(Config(),store,gateway,clock);
+            model.ReportProgress("act","complete","game",model.WindowId,3);
+            var offer=model.GetClaimOffer("a");Assert.That(model.ClaimOffer("a",offer.Token,offer.Fingerprint),Is.EqualTo(MissionClaimStatus.Claimed));
+            clock.UtcNow=clock.UtcNow.AddDays(1);model=Model(Config(),store,new Gateway(store),clock);
+            Assert.That(model.GetClaimOffer("a",offer.Token).IsCompleted,Is.True);
+            Assert.That(model.ClaimOffer("a",offer.Token,offer.Fingerprint),Is.EqualTo(MissionClaimStatus.AlreadyClaimed));
+        }
+        [Test] public void ClaimOffer_QueryIsReadOnlyAtWindowBoundary()
+        {
+            var store=new Store();var clock=new Clock();var model=Model(Config(),store,new Gateway(store),clock);
+            var original=model.WindowId;clock.UtcNow=clock.UtcNow.AddDays(1);
+            Assert.That(model.GetClaimOffer("a"),Is.Null);Assert.That(model.WindowId,Is.EqualTo(original));
+        }
+
         [TestCase(MissionPeriod.Daily, 420, 0, DayOfWeek.Monday, "2026-10-11T17:00:00Z", 1)]
         [TestCase(MissionPeriod.Weekly, 420, 0, DayOfWeek.Monday, "2026-10-11T17:00:00Z", 7)]
         [TestCase(MissionPeriod.Weekly, 0, 240, DayOfWeek.Sunday, "2027-01-03T04:00:00Z", 7)]

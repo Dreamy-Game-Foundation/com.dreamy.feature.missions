@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 namespace Dreamy.Missions
 {
     // Synchronous main-thread owner. All callbacks run while Busy; save candidates are detached.
-    public sealed class MissionModel : IMissionService
+    public sealed partial class MissionModel : IMissionService, IMissionClaimOffers
     {
         private readonly MissionCatalogConfig catalog;
         private readonly IDatasaveService datasave;
@@ -321,13 +321,24 @@ namespace Dreamy.Missions
             finally { busy = false; }
         }
 
-        public MissionClaimStatus Claim(string missionId)
+        public MissionClaimStatus Claim(string missionId) => ClaimCore(missionId, null, null);
+
+        private MissionClaimStatus ClaimCore(string missionId, string expectedToken, string expectedFingerprint)
         {
             if (busy) return MissionClaimStatus.Busy;
             busy = true;
             try
             {
+                if (expectedToken != null)
+                {
+                    var offer = GetClaimOffer(missionId, expectedToken);
+                    if (offer == null || offer.Fingerprint != expectedFingerprint) return MissionClaimStatus.UnknownMission;
+                    if (offer.IsCompleted) return MissionClaimStatus.AlreadyClaimed;
+                    var original = save.PendingClaims.FirstOrDefault(p => p.MissionId == missionId && OfferToken(p.WindowSnapshot, missionId) == expectedToken);
+                    if (original != null) return Resume(original);
+                }
                 AdvanceWindow();
+                if (expectedToken != null && GetClaimOffer(missionId, expectedToken) == null) return MissionClaimStatus.UnknownMission;
                 MissionWindowData active = save.ActiveWindow;
                 if (!active.SelectedIds.Contains(missionId)) return MissionClaimStatus.UnknownMission;
                 MissionDefinition mission = active.Definitions.First(m => m.Id == missionId);

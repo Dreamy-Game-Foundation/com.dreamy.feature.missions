@@ -1,6 +1,6 @@
 {
   "name": "com.dreamy.feature.missions",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "displayName": "Dreamy Missions",
   "description": "Persistent one-time counter missions with explicit progress events and claimable economy rewards.",
   "unity": "6000.0",
@@ -13,8 +13,9 @@
     "com.dreamy.feature": "0.2.0",
     "com.dreamy.dataconfig": "0.2.0",
     "com.dreamy.datasave": "0.2.0",
-    "com.dreamy.feature.economy": "0.3.0",
-    "com.unity.nuget.newtonsoft-json": "3.2.1"
+    "com.dreamy.feature.economy": "0.7.0",
+    "com.unity.nuget.newtonsoft-json": "3.2.1",
+    "com.cysharp.unitask": "2.5.10"
   },
   "samples": [
     {
