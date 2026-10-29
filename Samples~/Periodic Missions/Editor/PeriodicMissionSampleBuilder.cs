@@ -11,7 +11,7 @@ namespace Dreamy.Feature.Missions.PeriodicSample.Editor
 {
     public static class PeriodicMissionSampleBuilder
     {
-        [MenuItem("Tools/Dreamy/Missions/Build Periodic Sample Prefabs")]
+        // Explicit rebuild entry point for batchmode; omitted from the everyday Editor menu.
         public static void BuildImportedSample()
         {
             string script = AssetDatabase.FindAssets("PeriodicMissionSampleBuilder t:MonoScript")
