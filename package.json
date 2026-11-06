@@ -1,6 +1,6 @@
 {
   "name": "com.dreamy.feature.missions",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "displayName": "Dreamy Missions",
   "description": "Persistent one-time counter missions with explicit progress events and claimable economy rewards.",
   "unity": "6000.0",

@@ -1,5 +1,11 @@
 # Dreamy Missions
 
+## Phiên bản 0.3.1
+
+Hide the periodic-missions sample rebuild menu; keep the supplied sample assets and validation entry points. Runtime/save contracts are unchanged.
+
+Bản chuẩn bị phát hành nội bộ ngày 2026-11-06; chưa tạo/push tag. Giữ nguyên các sample đã import và meta GUID; import mới dùng version 0.3.1. Xem [CHANGELOG](CHANGELOG.md).
+
 Kỳ nhiệm vụ, selection/reroll đã lưu, objective đếm giá trị khác nhau và claim
 reward có recovery được mô tả trong
 [tài liệu nhiệm vụ theo kỳ](Documentation~/periodic-missions.md).

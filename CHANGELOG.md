@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.3.1] - 2026-11-06
+
+- Hide the periodic-missions sample rebuild menu; keep the supplied sample assets and validation entry points. Runtime/save contracts are unchanged.
+- Synchronize package metadata and README; no asset GUID or game-save migration. Prepared locally; no release tag or publication is implied.
+
 ## Unreleased — 0.3.0 candidate
 
 - Add optional IMissionClaimOffers and an engine-independent MissionRewardClaimSource. Bind confirmations to original window/mission/reroll/revision/payload, preserve old pending/completed query, and reject stale unstarted offers. Existing Claim API/save schema remains unchanged.
