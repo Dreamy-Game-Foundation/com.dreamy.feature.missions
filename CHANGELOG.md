@@ -5,12 +5,12 @@
 - Hide the periodic-missions sample rebuild menu; keep the supplied sample assets and validation entry points. Runtime/save contracts are unchanged.
 - Synchronize package metadata and README; no asset GUID or game-save migration. Prepared locally; no release tag or publication is implied.
 
-## Unreleased — 0.3.0 candidate
+## [0.3.0] - 2026-10-20 (source candidate; included in 0.3.1)
 
 - Add optional IMissionClaimOffers and an engine-independent MissionRewardClaimSource. Bind confirmations to original window/mission/reroll/revision/payload, preserve old pending/completed query, and reject stale unstarted offers. Existing Claim API/save schema remains unchanged.
 - New presentation integration requires Economy 0.7.0 and UniTask; release pins must be updated together.
 
-## Unreleased
+## Historical periodic-mission and installer work (included in 0.2.0 and later)
 
 - Add opt-in Daily/Weekly fixed-offset windows, injected clock/RNG, persisted revision snapshots and rollback high-water.
 - Add persisted pool selection, explicit conflict relaxation, transactional free reroll, distinct-value objectives and window-scoped event replay protection.
