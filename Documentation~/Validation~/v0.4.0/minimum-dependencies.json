@@ -1,0 +1,18 @@
+{
+  "com.dreamy.feature.economy": {
+    "commit": "1373c1d0a68e3f1310c11e0212f505fcfb1c21e8",
+    "packageVersion": "0.7.0"
+  },
+  "com.dreamy.feature": {
+    "commit": "699586ebe4ec08d18855b421493ee62f58f882f7",
+    "packageVersion": "0.2.0"
+  },
+  "com.dreamy.datasave": {
+    "commit": "0b52a15d13288e593010aada394b997c76927e19",
+    "packageVersion": "0.2.0"
+  },
+  "com.dreamy.dataconfig": {
+    "commit": "da02d9f94962b441a54470f18d18518a0e4d4cb4",
+    "packageVersion": "0.2.0"
+  }
+}

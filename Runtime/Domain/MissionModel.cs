@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 namespace Dreamy.Missions
 {
     // Synchronous main-thread owner. All callbacks run while Busy; save candidates are detached.
-    public sealed partial class MissionModel : IMissionService, IMissionClaimOffers
+    public sealed partial class MissionModel : IMissionService, IMissionClaimOffers, IMissionBatchProgress
     {
         private readonly MissionCatalogConfig catalog;
         private readonly IDatasaveService datasave;
@@ -110,6 +110,7 @@ namespace Dreamy.Missions
                 if (gateway == null && save.PendingClaims.Any(p => p.Journal.State != RewardJournalState.Completed))
                     throw new InvalidOperationException("Pending strict claims require a delivery gateway.");
                 if (gateway != null) RecoverPending();
+                EnsureWritable();
                 AdvanceWindow();
             }
             finally { busy = false; }
@@ -124,7 +125,7 @@ namespace Dreamy.Missions
 
         public IReadOnlyList<MissionState> GetState()
         {
-            if (!busy) Refresh();
+            if (!busy && !RequiresReload) Refresh();
             MissionWindowData active = save.ActiveWindow;
             return active.SelectedIds.Select(id =>
             {
@@ -137,6 +138,7 @@ namespace Dreamy.Missions
         public MissionRefreshStatus Refresh()
         {
             if (busy) return MissionRefreshStatus.Busy;
+            EnsureWritable();
             busy = true;
             try { return AdvanceWindow() ? MissionRefreshStatus.Updated : MissionRefreshStatus.Unchanged; }
             finally { busy = false; }
@@ -235,6 +237,7 @@ namespace Dreamy.Missions
         public MissionRerollStatus Reroll(string missionId)
         {
             if (busy) return MissionRerollStatus.Busy;
+            EnsureWritable();
             busy = true;
             try
             {
@@ -281,6 +284,7 @@ namespace Dreamy.Missions
             string windowId, long amount, string distinctValue, bool legacy)
         {
             if (busy) return MissionProgressStatus.Busy;
+            EnsureWritable();
             if (string.IsNullOrWhiteSpace(eventKey) || string.IsNullOrWhiteSpace(eventId) || amount <= 0 ||
                 (!legacy && (string.IsNullOrWhiteSpace(eventNamespace) || string.IsNullOrWhiteSpace(windowId))) ||
                 (legacy && catalog.Period.Period != MissionPeriod.Permanent))
@@ -326,6 +330,7 @@ namespace Dreamy.Missions
         private MissionClaimStatus ClaimCore(string missionId, string expectedToken, string expectedFingerprint)
         {
             if (busy) return MissionClaimStatus.Busy;
+            EnsureWritable();
             busy = true;
             try
             {
@@ -386,6 +391,7 @@ namespace Dreamy.Missions
         public MissionClaimStatus RecoverClaims()
         {
             if (busy) return MissionClaimStatus.Busy;
+            EnsureWritable();
             busy = true;
             try { return gateway == null ? MissionClaimStatus.GrantFailed : RecoverPending(); }
             finally { busy = false; }
@@ -444,12 +450,15 @@ namespace Dreamy.Missions
             // Keep released save fields readable for Permanent migration and existing clients.
             next.Missions = next.ActiveWindow.Missions;
             next.ProcessedEventIds = next.ActiveWindow.ProcessedEventIds;
-            datasave.Save(Clone(next), saveKey);
+            // Storage may write and then throw. Never accept another mutation on a stale snapshot.
+            MissionSaveData snapshot = Clone(next);
+            try { datasave.Save(snapshot, saveKey); }
+            catch { RequiresReload = true; throw; }
             save = next;
         }
 
         private static T Copy<T>(T data) => data == null ? default :
             JsonConvert.DeserializeObject<T>(JsonConvert.SerializeObject(data));
-        private static MissionSaveData Clone(MissionSaveData data) => data == null ? new MissionSaveData() : Copy(data);
+        private static MissionSaveData Clone(MissionSaveData data) => MissionSaveCopy.Detach(data);
     }
 }

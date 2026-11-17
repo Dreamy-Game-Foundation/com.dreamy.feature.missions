@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="103" result="Passed" total="103" passed="103" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-11-17 07:08:02Z" end-time="2026-11-17 07:08:04Z" duration="2.0692736">
+  <test-suite type="TestSuite" id="1000" name="Orbit Busters" fullname="Orbit Busters" runstate="Runnable" testcasecount="1385" result="Passed" start-time="2026-11-17 07:08:02Z" end-time="2026-11-17 07:08:04Z" duration="2.069274" total="103" passed="103" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="2705" name="Dreamy.Template.Tests.EditMode.dll" fullname="[consumer]/Library/ScriptAssemblies/Dreamy.Template.Tests.EditMode.dll" runstate="Runnable" testcasecount="1032" result="Passed" start-time="2026-11-17 07:08:02Z" end-time="2026-11-17 07:08:04Z" duration="2.048331" total="103" passed="103" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="1098995" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="2706" name="Dreamy" fullname="Dreamy" runstate="Runnable" testcasecount="1032" result="Passed" start-time="2026-11-17 07:08:02Z" end-time="2026-11-17 07:08:04Z" duration="2.042561" total="103" passed="103" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="2707" name="Template" fullname="Dreamy.Template" runstate="Runnable" testcasecount="1032" result="Passed" start-time="2026-11-17 07:08:02Z" end-time="2026-11-17 07:08:04Z" duration="2.036701" total="103" passed="103" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="2708" name="Tests" fullname="Dreamy.Template.Tests" runstate="Runnable" testcasecount="1032" result="Passed" start-time="2026-11-17 07:08:02Z" end-time="2026-11-17 07:08:04Z" duration="2.030817" total="103" passed="103" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1433" name="AccountProgressionIntegrationTests" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" testcasecount="28" result="Passed" start-time="2026-11-17 07:08:02Z" end-time="2026-11-17 07:08:03Z" duration="1.111956" total="28" passed="28" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1434" name="BattleResultUsesAuthoritativeAccountXpWithFreshSaveLoads" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.BattleResultUsesAuthoritativeAccountXpWithFreshSaveLoads" methodname="BattleResultUsesAuthoritativeAccountXpWithFreshSaveLoads" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" seed="1731905892" result="Passed" start-time="2026-11-17 07:08:02Z" end-time="2026-11-17 07:08:02Z" duration="0.099953" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1442" name="FixedXpGoalsCoexistWithResourcePoolAndResetAtBangkokMidnight" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.FixedXpGoalsCoexistWithResourcePoolAndResetAtBangkokMidnight" methodname="FixedXpGoalsCoexistWithResourcePoolAndResetAtBangkokMidnight" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" seed="606394048" result="Passed" start-time="2026-11-17 07:08:02Z" end-time="2026-11-17 07:08:03Z" duration="0.081854" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1463" name="HomeChestRecoversAcrossEverySaveBoundary" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.HomeChestRecoversAcrossEverySaveBoundary" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.536012" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1461" name="HomeChestRecoversAcrossEverySaveBoundary(False)" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.HomeChestRecoversAcrossEverySaveBoundary(False)" methodname="HomeChestRecoversAcrossEverySaveBoundary" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" seed="1695278326" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.315684" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1462" name="HomeChestRecoversAcrossEverySaveBoundary(True)" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.HomeChestRecoversAcrossEverySaveBoundary(True)" methodname="HomeChestRecoversAcrossEverySaveBoundary" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" seed="465300257" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.218461" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1443" name="HomeChestsDeliverConfiguredCardsAndReplayWithoutExtraRewards" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.HomeChestsDeliverConfiguredCardsAndReplayWithoutExtraRewards" methodname="HomeChestsDeliverConfiguredCardsAndReplayWithoutExtraRewards" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" seed="1550765551" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.034182" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1447" name="LaunchCurveAndMilestonesMatchApprovedLevelTable" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.LaunchCurveAndMilestonesMatchApprovedLevelTable" methodname="LaunchCurveAndMilestonesMatchApprovedLevelTable" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" seed="549266159" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.077983" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1437" name="LegacyLevelIsPreservedAndImportedOnlyOnce" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.LegacyLevelIsPreservedAndImportedOnlyOnce" methodname="LegacyLevelIsPreservedAndImportedOnlyOnce" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" seed="1886940316" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.020596" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1448" name="LevelChestConsumesOnceAndReplaysWithoutExtraRewards" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.LevelChestConsumesOnceAndReplaysWithoutExtraRewards" methodname="LevelChestConsumesOnceAndReplaysWithoutExtraRewards" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" seed="58639093" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.007798" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1455" name="LevelRewardBoundaryMapsTypedRewards" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.LevelRewardBoundaryMapsTypedRewards" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.002962" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1449" name="LevelRewardBoundaryMapsTypedRewards(&quot;currency&quot;,&quot;currency.coin&quot;,Coin)" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.LevelRewardBoundaryMapsTypedRewards(&quot;currency&quot;,&quot;currency.coin&quot;,Coin)" methodname="LevelRewardBoundaryMapsTypedRewards" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" seed="1019309778" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.001041" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1450" name="LevelRewardBoundaryMapsTypedRewards(&quot;currency&quot;,&quot;currency.gem&quot;,Gem)" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.LevelRewardBoundaryMapsTypedRewards(&quot;currency&quot;,&quot;currency.gem&quot;,Gem)" methodname="LevelRewardBoundaryMapsTypedRewards" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" seed="567673695" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.000132" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1451" name="LevelRewardBoundaryMapsTypedRewards(&quot;unit&quot;,&quot;unit.captain_nova&quot;,Unit)" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.LevelRewardBoundaryMapsTypedRewards(&quot;unit&quot;,&quot;unit.captain_nova&quot;,Unit)" methodname="LevelRewardBoundaryMapsTypedRewards" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" seed="498271909" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.000175" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1452" name="LevelRewardBoundaryMapsTypedRewards(&quot;card&quot;,&quot;card.volt_stein&quot;,Card)" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.LevelRewardBoundaryMapsTypedRewards(&quot;card&quot;,&quot;card.volt_stein&quot;,Card)" methodname="LevelRewardBoundaryMapsTypedRewards" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" seed="1022751305" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.000095" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1453" name="LevelRewardBoundaryMapsTypedRewards(&quot;chest&quot;,&quot;chest.home.ii&quot;,SilverChest)" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.LevelRewardBoundaryMapsTypedRewards(&quot;chest&quot;,&quot;chest.home.ii&quot;,SilverChest)" methodname="LevelRewardBoundaryMapsTypedRewards" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" seed="987611785" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.000078" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1454" name="LevelRewardBoundaryMapsTypedRewards(&quot;chest&quot;,&quot;chest.home.iii&quot;,GoldChest)" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.LevelRewardBoundaryMapsTypedRewards(&quot;chest&quot;,&quot;chest.home.iii&quot;,GoldChest)" methodname="LevelRewardBoundaryMapsTypedRewards" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" seed="736272585" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.000072" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-suite type="ParameterizedMethod" id="1459" name="LevelRewardBoundaryRejectsUnsupportedPayloads" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.LevelRewardBoundaryRejectsUnsupportedPayloads" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.000845" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1456" name="LevelRewardBoundaryRejectsUnsupportedPayloads(&quot;chest&quot;,&quot;other.iii&quot;)" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.LevelRewardBoundaryRejectsUnsupportedPayloads(&quot;chest&quot;,&quot;other.iii&quot;)" methodname="LevelRewardBoundaryRejectsUnsupportedPayloads" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" seed="366338020" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.000179" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1457" name="LevelRewardBoundaryRejectsUnsupportedPayloads(&quot;card&quot;,&quot;unit.volt_stein&quot;)" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.LevelRewardBoundaryRejectsUnsupportedPayloads(&quot;card&quot;,&quot;unit.volt_stein&quot;)" methodname="LevelRewardBoundaryRejectsUnsupportedPayloads" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" seed="1610024202" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.000046" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1458" name="LevelRewardBoundaryRejectsUnsupportedPayloads(&quot;cosmetic&quot;,&quot;cosmetic.profile-frame.account-30&quot;)" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.LevelRewardBoundaryRejectsUnsupportedPayloads(&quot;cosmetic&quot;,&quot;cosmetic.profile-frame.account-30&quot;)" methodname="LevelRewardBoundaryRejectsUnsupportedPayloads" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" seed="576389549" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.000038" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1460" name="LockedWeeklyClickShowsMessageAndKeepsDailySelected" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.LockedWeeklyClickShowsMessageAndKeepsDailySelected" methodname="LockedWeeklyClickShowsMessageAndKeepsDailySelected" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" seed="1574189745" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.005707" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1435" name="MatchXpDeduplicatesAcrossRestartAndCapDoesNotStopEarning" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.MatchXpDeduplicatesAcrossRestartAndCapDoesNotStopEarning" methodname="MatchXpDeduplicatesAcrossRestartAndCapDoesNotStopEarning" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" seed="1911142357" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.027320" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1467" name="MysteryResolutionIsStableAcrossRestartAndExcludesFutureLevelUnits" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.MysteryResolutionIsStableAcrossRestartAndExcludesFutureLevelUnits" methodname="MysteryResolutionIsStableAcrossRestartAndExcludesFutureLevelUnits" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" seed="476647792" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.005023" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1466" name="PurchasedChestRecoversOneChargeAndOneRewardAcrossSaveBoundaries" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.PurchasedChestRecoversOneChargeAndOneRewardAcrossSaveBoundaries" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.139179" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1464" name="PurchasedChestRecoversOneChargeAndOneRewardAcrossSaveBoundaries(False)" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.PurchasedChestRecoversOneChargeAndOneRewardAcrossSaveBoundaries(False)" methodname="PurchasedChestRecoversOneChargeAndOneRewardAcrossSaveBoundaries" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" seed="324784544" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.071916" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1465" name="PurchasedChestRecoversOneChargeAndOneRewardAcrossSaveBoundaries(True)" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.PurchasedChestRecoversOneChargeAndOneRewardAcrossSaveBoundaries(True)" methodname="PurchasedChestRecoversOneChargeAndOneRewardAcrossSaveBoundaries" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" seed="927408493" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.066633" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1441" name="QuestBatchAutoClaimsCompletedXpOnceAndWritesProgressOncePerPeriod" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.QuestBatchAutoClaimsCompletedXpOnceAndWritesProgressOncePerPeriod" methodname="QuestBatchAutoClaimsCompletedXpOnceAndWritesProgressOncePerPeriod" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" seed="1578397434" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.010871" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1440" name="QuestBatchRetriesXpSaveFailureWithoutDuplicatingOriginalEvents" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.QuestBatchRetriesXpSaveFailureWithoutDuplicatingOriginalEvents" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.015556" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1438" name="QuestBatchRetriesXpSaveFailureWithoutDuplicatingOriginalEvents(False)" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.QuestBatchRetriesXpSaveFailureWithoutDuplicatingOriginalEvents(False)" methodname="QuestBatchRetriesXpSaveFailureWithoutDuplicatingOriginalEvents" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" seed="976793934" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.008526" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1439" name="QuestBatchRetriesXpSaveFailureWithoutDuplicatingOriginalEvents(True)" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.QuestBatchRetriesXpSaveFailureWithoutDuplicatingOriginalEvents(True)" methodname="QuestBatchRetriesXpSaveFailureWithoutDuplicatingOriginalEvents" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" seed="2141837373" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.006374" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1436" name="SilentXpUpdatesSaveAndRewardsWithoutQueuingLevelUpPanels" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.SilentXpUpdatesSaveAndRewardsWithoutQueuingLevelUpPanels" methodname="SilentXpUpdatesSaveAndRewardsWithoutQueuingLevelUpPanels" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" seed="979220812" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.027595" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1446" name="XpRewardRetriesAfterProgressionSaveFailureWithoutDoubleGrant" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.XpRewardRetriesAfterProgressionSaveFailureWithoutDoubleGrant" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.007018" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1444" name="XpRewardRetriesAfterProgressionSaveFailureWithoutDoubleGrant(False)" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.XpRewardRetriesAfterProgressionSaveFailureWithoutDoubleGrant(False)" methodname="XpRewardRetriesAfterProgressionSaveFailureWithoutDoubleGrant" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" seed="1426552482" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.003572" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1445" name="XpRewardRetriesAfterProgressionSaveFailureWithoutDoubleGrant(True)" fullname="Dreamy.Template.Tests.AccountProgressionIntegrationTests.XpRewardRetriesAfterProgressionSaveFailureWithoutDoubleGrant(True)" methodname="XpRewardRetriesAfterProgressionSaveFailureWithoutDoubleGrant" classname="Dreamy.Template.Tests.AccountProgressionIntegrationTests" runstate="Runnable" seed="378195529" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:03Z" duration="0.002839" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+            </test-suite>
+            <test-suite type="TestFixture" id="1805" name="BattleQuestProgressTests" fullname="Dreamy.Template.Tests.BattleQuestProgressTests" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" testcasecount="40" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:04Z" duration="0.429927" total="40" passed="40" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1831" name="AiShotsAndAiEnergyCollectionDoNotEarnPlayerProgress" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.AiShotsAndAiEnergyCollectionDoNotEarnPlayerProgress" methodname="AiShotsAndAiEnergyCollectionDoNotEarnPlayerProgress" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="1765237386" result="Passed" start-time="2026-11-17 07:08:03Z" end-time="2026-11-17 07:08:04Z" duration="0.188175" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1816" name="AuthoritativeProducersMapEveryObjectiveToBothQuestOwners" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.AuthoritativeProducersMapEveryObjectiveToBothQuestOwners" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.072865" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <output><![CDATA[Destroy may not be called from edit mode! Use DestroyImmediate instead.
+Destroying an object in edit mode destroys it permanently.
+Destroy may not be called from edit mode! Use DestroyImmediate instead.
+Destroying an object in edit mode destroys it permanently.
+]]></output>
+                <test-case id="1806" name="AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(PlayMatch)" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(PlayMatch)" methodname="AuthoritativeProducersMapEveryObjectiveToBothQuestOwners" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="534238040" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.009741" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1807" name="AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(WinMatch)" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(WinMatch)" methodname="AuthoritativeProducersMapEveryObjectiveToBothQuestOwners" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="1287741533" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.004794" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1808" name="AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(FireShot)" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(FireShot)" methodname="AuthoritativeProducersMapEveryObjectiveToBothQuestOwners" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="1618783755" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.006527" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1809" name="AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(DealDamage)" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(DealDamage)" methodname="AuthoritativeProducersMapEveryObjectiveToBothQuestOwners" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="1094936247" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.005700" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1810" name="AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(DestroyUnit)" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(DestroyUnit)" methodname="AuthoritativeProducersMapEveryObjectiveToBothQuestOwners" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="1903140894" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.004503" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1811" name="AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(ExposeUnit)" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(ExposeUnit)" methodname="AuthoritativeProducersMapEveryObjectiveToBothQuestOwners" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="586865949" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.018145" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1812" name="AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(CollectEnergyNode)" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(CollectEnergyNode)" methodname="AuthoritativeProducersMapEveryObjectiveToBothQuestOwners" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="595343747" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.005497" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1813" name="AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(HitUnit)" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(HitUnit)" methodname="AuthoritativeProducersMapEveryObjectiveToBothQuestOwners" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="370973096" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.004614" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1814" name="AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(ExposeByTerrain)" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(ExposeByTerrain)" methodname="AuthoritativeProducersMapEveryObjectiveToBothQuestOwners" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="1128516796" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.004895" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1815" name="AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(UseDifferentUnit)" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.AuthoritativeProducersMapEveryObjectiveToBothQuestOwners(UseDifferentUnit)" methodname="AuthoritativeProducersMapEveryObjectiveToBothQuestOwners" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="1638845848" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.004945" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1835" name="BattleWithoutAHumanPlayerNeverReportsCompletion" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.BattleWithoutAHumanPlayerNeverReportsCompletion" methodname="BattleWithoutAHumanPlayerNeverReportsCompletion" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="1819694875" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.002818" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1833" name="CompletedAndWonRemainIndependentAndRepeatedCompletionIsDeduplicated" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.CompletedAndWonRemainIndependentAndRepeatedCompletionIsDeduplicated" methodname="CompletedAndWonRemainIndependentAndRepeatedCompletionIsDeduplicated" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="1498439487" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.004800" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1823" name="CompletedBattleBatchRetriesAfterWeeklyFailureWithoutRepeatingDaily" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.CompletedBattleBatchRetriesAfterWeeklyFailureWithoutRepeatingDaily" methodname="CompletedBattleBatchRetriesAfterWeeklyFailureWithoutRepeatingDaily" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="202580404" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.012919" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[IOException: Injected battle Quest save failure.
+Dreamy.Template.Tests.BattleQuestProgressTests+Disk.Save[T] (T value, System.String key) (at Assets/_Project/Tests/EditMode/BattleQuestProgressTests.cs:620)
+Dreamy.Template.Gameplay.Progression.QuestService+EmbeddedMissionSave.Save[T] (T data, System.String key) (at Assets/_Project/Scripts/Gameplay/Progression/Quest/QuestService.Migration.cs:195)
+Dreamy.Missions.MissionModel.Commit (Dreamy.Missions.MissionSaveData next) (at ./ValidationPackages/com.dreamy.feature.missions/Runtime/Domain/MissionModel.cs:456)
+Dreamy.Missions.MissionModel.ReportProgressBatch (System.Collections.Generic.IReadOnlyList`1[T] events) (at ./ValidationPackages/com.dreamy.feature.missions/Runtime/Domain/MissionModel.Batch.cs:117)
+Dreamy.Template.Gameplay.Progression.QuestService.ReportProgressBatch (Dreamy.Template.Gameplay.Progression.QuestPeriod period, System.Collections.Generic.IReadOnlyList`1[T] events) (at Assets/_Project/Scripts/Gameplay/Progression/Quest/QuestService.Strict.cs:108)
+Dreamy.Template.Gameplay.Battle.BattleQuestProgress.RetryPending () (at Assets/_Project/Scripts/Gameplay/Battle/BattleQuestProgress.cs:179)
+UnityEngine.Debug:LogException(Exception)
+Dreamy.Template.Gameplay.Battle.BattleQuestProgress:RetryPending() (at Assets/_Project/Scripts/Gameplay/Battle/BattleQuestProgress.cs:197)
+Dreamy.Template.Gameplay.Battle.BattleQuestProgress:RecordCompleted(Boolean, Boolean) (at Assets/_Project/Scripts/Gameplay/Battle/BattleQuestProgress.cs:140)
+Dreamy.Template.Tests.BattleQuestProgressTests:CompletedBattleBatchRetriesAfterWeeklyFailureWithoutRepeatingDaily() (at Assets/_Project/Tests/EditMode/BattleQuestProgressTests.cs:173)
+System.Reflection.MethodBase:Invoke(Object, Object[])
+NUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo, Object, Object[])
+NUnit.Framework.Internal.MethodWrapper:Invoke(Object, Object[])
+NUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)
+NUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)
+NUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions() (at /home/bokken/build/output/unity/unity/Editor/Mono/EditorApplication.cs:401)
+
+]]></output>
+              </test-case>
+              <test-case id="1822" name="CompletedBattleBatchWritesEachPeriodOnceAndReplaysOriginalEventsSafely" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.CompletedBattleBatchWritesEachPeriodOnceAndReplaysOriginalEventsSafely" methodname="CompletedBattleBatchWritesEachPeriodOnceAndReplaysOriginalEventsSafely" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="1051309798" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.006934" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1832" name="DistinctUnitValuesAreNotShotEventIds" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.DistinctUnitValuesAreNotShotEventIds" methodname="DistinctUnitValuesAreNotShotEventIds" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="1671016448" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.006869" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1817" name="DuplicateDamageCallbackAndRestartReplayRetainOriginalEventIdentity" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.DuplicateDamageCallbackAndRestartReplayRetainOriginalEventIdentity" methodname="DuplicateDamageCallbackAndRestartReplayRetainOriginalEventIdentity" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="789479101" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.008915" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1850" name="ExposureKeepsMutationWindowsWhenFixedUpdateArrivesAfterRollover" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.ExposureKeepsMutationWindowsWhenFixedUpdateArrivesAfterRollover" methodname="ExposureKeepsMutationWindowsWhenFixedUpdateArrivesAfterRollover" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="2109893809" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.007101" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1844" name="ExposureRequiresConfirmedPlayerTerrainLossAtTheSamePosition" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.ExposureRequiresConfirmedPlayerTerrainLossAtTheSamePosition" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.021391" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <output><![CDATA[Destroy may not be called from edit mode! Use DestroyImmediate instead.
+Destroying an object in edit mode destroys it permanently.
+]]></output>
+                <test-case id="1840" name="ExposureRequiresConfirmedPlayerTerrainLossAtTheSamePosition(Left,Right,False,True)" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.ExposureRequiresConfirmedPlayerTerrainLossAtTheSamePosition(Left,Right,False,True)" methodname="ExposureRequiresConfirmedPlayerTerrainLossAtTheSamePosition" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="862741918" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.008441" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1841" name="ExposureRequiresConfirmedPlayerTerrainLossAtTheSamePosition(Right,Left,False,False)" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.ExposureRequiresConfirmedPlayerTerrainLossAtTheSamePosition(Right,Left,False,False)" methodname="ExposureRequiresConfirmedPlayerTerrainLossAtTheSamePosition" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="1726951913" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.004143" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1842" name="ExposureRequiresConfirmedPlayerTerrainLossAtTheSamePosition(Left,Left,False,False)" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.ExposureRequiresConfirmedPlayerTerrainLossAtTheSamePosition(Left,Left,False,False)" methodname="ExposureRequiresConfirmedPlayerTerrainLossAtTheSamePosition" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="835102791" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.003381" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1843" name="ExposureRequiresConfirmedPlayerTerrainLossAtTheSamePosition(Left,Right,True,False)" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.ExposureRequiresConfirmedPlayerTerrainLossAtTheSamePosition(Left,Right,True,False)" methodname="ExposureRequiresConfirmedPlayerTerrainLossAtTheSamePosition" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="780440976" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.003341" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1839" name="FailedWindowCaptureDoesNotInterruptDamageOrGrantOnALaterCallback" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.FailedWindowCaptureDoesNotInterruptDamageOrGrantOnALaterCallback" methodname="FailedWindowCaptureDoesNotInterruptDamageOrGrantOnALaterCallback" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="181082202" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.008038" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[IOException: Injected battle Quest save failure.
+Dreamy.Template.Tests.BattleQuestProgressTests+Disk.Save[T] (T value, System.String key) (at Assets/_Project/Tests/EditMode/BattleQuestProgressTests.cs:620)
+Dreamy.Template.Gameplay.Progression.QuestService+EmbeddedMissionSave.Save[T] (T data, System.String key) (at Assets/_Project/Scripts/Gameplay/Progression/Quest/QuestService.Migration.cs:195)
+Dreamy.Missions.MissionModel.Commit (Dreamy.Missions.MissionSaveData next) (at ./ValidationPackages/com.dreamy.feature.missions/Runtime/Domain/MissionModel.cs:456)
+Dreamy.Missions.MissionModel.AdvanceWindow () (at ./ValidationPackages/com.dreamy.feature.missions/Runtime/Domain/MissionModel.cs:155)
+Dreamy.Missions.MissionModel.Refresh () (at ./ValidationPackages/com.dreamy.feature.missions/Runtime/Domain/MissionModel.cs:143)
+Dreamy.Template.Gameplay.Progression.QuestService.GetWindowId (Dreamy.Template.Gameplay.Progression.QuestPeriod period) (at Assets/_Project/Scripts/Gameplay/Progression/Quest/QuestService.Strict.cs:70)
+Dreamy.Template.Gameplay.Battle.BattleQuestProgress.Capture (System.String action) (at Assets/_Project/Scripts/Gameplay/Battle/BattleQuestProgress.cs:74)
+UnityEngine.Debug:LogException(Exception)
+Dreamy.Template.Gameplay.Battle.BattleQuestProgress:Capture(String) (at Assets/_Project/Scripts/Gameplay/Battle/BattleQuestProgress.cs:81)
+Dreamy.Template.Gameplay.Battle.BattleQuestProgress:GetAction(Object, Object, String) (at Assets/_Project/Scripts/Gameplay/Battle/BattleQuestProgress.cs:208)
+Dreamy.Template.Gameplay.Battle.BattleQuestProgress:RecordDamage(DamageInfo, IDamageable, DamageResult) (at Assets/_Project/Scripts/Gameplay/Battle/BattleQuestProgress.cs:101)
+Dreamy.Template.Gameplay.Battle.ExplosionService:ReportDamageApplied(DamageInfo, IDamageable, DamageResult) (at Assets/_Project/Scripts/Gameplay/Battle/ExplosionService.cs:106)
+Dreamy.Template.Tests.BattleQuestProgressTests:FailedWindowCaptureDoesNotInterruptDamageOrGrantOnALaterCallback() (at Assets/_Project/Tests/EditMode/BattleQuestProgressTests.cs:324)
+System.Reflection.MethodBase:Invoke(Object, Object[])
+NUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo, Object, Object[])
+NUnit.Framework.Internal.MethodWrapper:Invoke(Object, Object[])
+NUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)
+NUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)
+NUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions() (at /home/bokken/build/output/unity/unity/Editor/Mono/EditorApplication.cs:401)
+
+]]></output>
+              </test-case>
+              <test-case id="1834" name="IneligibleCompletionDoesNotGrantAndLossOnlyGrantsPlay" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.IneligibleCompletionDoesNotGrantAndLossOnlyGrantsPlay" methodname="IneligibleCompletionDoesNotGrantAndLossOnlyGrantsPlay" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="1855739375" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.004531" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1818" name="MultipleTargetsOfOneDamageActionAndLaterDamageHaveIndependentIdentities" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.MultipleTargetsOfOneDamageActionAndLaterDamageHaveIndependentIdentities" methodname="MultipleTargetsOfOneDamageActionAndLaterDamageHaveIndependentIdentities" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="1511235717" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.006561" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1848" name="NearbyNoOpPlayerCarveThenAiCarveNeverUsesCurrentPlayerTeam" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.NearbyNoOpPlayerCarveThenAiCarveNeverUsesCurrentPlayerTeam" methodname="NearbyNoOpPlayerCarveThenAiCarveNeverUsesCurrentPlayerTeam" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="277915003" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.003402" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1830" name="NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.017831" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1824" name="NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress(Right,Left,Character,5)" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress(Right,Left,Character,5)" methodname="NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="1937858079" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.003023" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1825" name="NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress(Neutral,Right,Character,5)" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress(Neutral,Right,Character,5)" methodname="NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="1259715584" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.002718" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1826" name="NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress(Left,Left,Character,5)" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress(Left,Left,Character,5)" methodname="NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="2082683253" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.002657" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1827" name="NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress(Left,Neutral,Character,5)" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress(Left,Neutral,Character,5)" methodname="NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="1601534460" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.002784" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1828" name="NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress(Left,Right,Bunker,5)" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress(Left,Right,Bunker,5)" methodname="NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="1600961806" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.002744" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1829" name="NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress(Left,Right,Character,0)" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress(Left,Right,Character,0)" methodname="NonPlayerFriendlyNeutralNonUnitAndZeroDamageDoNotEarnProgress" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="701707779" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.002702" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1837" name="OldPayloadReplayCannotAdvanceEitherNewWindow" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.OldPayloadReplayCannotAdvanceEitherNewWindow" methodname="OldPayloadReplayCannotAdvanceEitherNewWindow" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="1236944252" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.006776" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1836" name="PartialPeriodSaveRetriesOriginalPayloadWithoutRepeatingSavedPeriod" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.PartialPeriodSaveRetriesOriginalPayloadWithoutRepeatingSavedPeriod" methodname="PartialPeriodSaveRetriesOriginalPayloadWithoutRepeatingSavedPeriod" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="984030421" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.007680" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[IOException: Injected battle Quest save failure.
+Dreamy.Template.Tests.BattleQuestProgressTests+Disk.Save[T] (T value, System.String key) (at Assets/_Project/Tests/EditMode/BattleQuestProgressTests.cs:620)
+Dreamy.Template.Gameplay.Progression.QuestService+EmbeddedMissionSave.Save[T] (T data, System.String key) (at Assets/_Project/Scripts/Gameplay/Progression/Quest/QuestService.Migration.cs:195)
+Dreamy.Missions.MissionModel.Commit (Dreamy.Missions.MissionSaveData next) (at ./ValidationPackages/com.dreamy.feature.missions/Runtime/Domain/MissionModel.cs:456)
+Dreamy.Missions.MissionModel.ReportProgressBatch (System.Collections.Generic.IReadOnlyList`1[T] events) (at ./ValidationPackages/com.dreamy.feature.missions/Runtime/Domain/MissionModel.Batch.cs:117)
+Dreamy.Template.Gameplay.Progression.QuestService.ReportProgressBatch (Dreamy.Template.Gameplay.Progression.QuestPeriod period, System.Collections.Generic.IReadOnlyList`1[T] events) (at Assets/_Project/Scripts/Gameplay/Progression/Quest/QuestService.Strict.cs:108)
+Dreamy.Template.Gameplay.Battle.BattleQuestProgress.RetryPending () (at Assets/_Project/Scripts/Gameplay/Battle/BattleQuestProgress.cs:179)
+UnityEngine.Debug:LogException(Exception)
+Dreamy.Template.Gameplay.Battle.BattleQuestProgress:RetryPending() (at Assets/_Project/Scripts/Gameplay/Battle/BattleQuestProgress.cs:197)
+Dreamy.Template.Gameplay.Battle.BattleQuestProgress:RecordShot(BattleTeamId, String) (at Assets/_Project/Scripts/Gameplay/Battle/BattleQuestProgress.cs:93)
+Dreamy.Template.Gameplay.Battle.<LaunchPatternAsync>d__46:MoveNext() (at Assets/_Project/Scripts/Gameplay/Battle/BattleProjectileService.cs:215)
+Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskVoidMethodBuilder:Start(<LaunchPatternAsync>d__46&) (at ./Library/PackageCache/com.cysharp.unitask@360e370345b9/Runtime/CompilerServices/AsyncUniTaskVoidMethodBuilder.cs:110)
+Dreamy.Template.Gameplay.Battle.BattleProjectileService:LaunchPatternAsync(BattleTeamId, WeaponDefinition, Transform, Vector2, Vector2, WeaponRuntimeConfig, IShotPattern, EnergyShotModifier, BattleCharacter, Int32)
+Dreamy.Template.Gameplay.Battle.BattleProjectileService:Launch(BattleTeamId, WeaponDefinition, Transform, Vector2, Vector2, EnergyShotModifier, Action`1, Int64) (at Assets/_Project/Scripts/Gameplay/Battle/BattleProjectileService.cs:170)
+Dreamy.Template.Gameplay.Battle.BattleProjectileService:Launch(BattleTeamId, WeaponDefinition, Transform, Vector2, Vector2, Action`1) (at Assets/_Project/Scripts/Gameplay/Battle/BattleProjectileService.cs:134)
+Dreamy.Template.Tests.Fixture:Launch(BattleTeamId) (at Assets/_Project/Tests/EditMode/BattleQuestProgressTests.cs:499)
+Dreamy.Template.Tests.BattleQuestProgressTests:PartialPeriodSaveRetriesOriginalPayloadWithoutRepeatingSavedPeriod() (at Assets/_Project/Tests/EditMode/BattleQuestProgressTests.cs:269)
+System.Reflection.MethodBase:Invoke(Object, Object[])
+NUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo, Object, Object[])
+NUnit.Framework.Internal.MethodWrapper:Invoke(Object, Object[])
+NUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)
+NUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)
+NUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions() (at /home/bokken/build/output/unity/unity/Editor/Mono/EditorApplication.cs:401)
+
+]]></output>
+              </test-case>
+              <test-case id="1838" name="PartialSaveRetryAfterRolloverNeverRecapturesEitherWindow" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.PartialSaveRetryAfterRolloverNeverRecapturesEitherWindow" methodname="PartialSaveRetryAfterRolloverNeverRecapturesEitherWindow" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="106751556" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.008602" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[IOException: Injected battle Quest save failure.
+Dreamy.Template.Tests.BattleQuestProgressTests+Disk.Save[T] (T value, System.String key) (at Assets/_Project/Tests/EditMode/BattleQuestProgressTests.cs:620)
+Dreamy.Template.Gameplay.Progression.QuestService+EmbeddedMissionSave.Save[T] (T data, System.String key) (at Assets/_Project/Scripts/Gameplay/Progression/Quest/QuestService.Migration.cs:195)
+Dreamy.Missions.MissionModel.Commit (Dreamy.Missions.MissionSaveData next) (at ./ValidationPackages/com.dreamy.feature.missions/Runtime/Domain/MissionModel.cs:456)
+Dreamy.Missions.MissionModel.ReportProgressBatch (System.Collections.Generic.IReadOnlyList`1[T] events) (at ./ValidationPackages/com.dreamy.feature.missions/Runtime/Domain/MissionModel.Batch.cs:117)
+Dreamy.Template.Gameplay.Progression.QuestService.ReportProgressBatch (Dreamy.Template.Gameplay.Progression.QuestPeriod period, System.Collections.Generic.IReadOnlyList`1[T] events) (at Assets/_Project/Scripts/Gameplay/Progression/Quest/QuestService.Strict.cs:108)
+Dreamy.Template.Gameplay.Battle.BattleQuestProgress.RetryPending () (at Assets/_Project/Scripts/Gameplay/Battle/BattleQuestProgress.cs:179)
+UnityEngine.Debug:LogException(Exception)
+Dreamy.Template.Gameplay.Battle.BattleQuestProgress:RetryPending() (at Assets/_Project/Scripts/Gameplay/Battle/BattleQuestProgress.cs:197)
+Dreamy.Template.Gameplay.Battle.BattleQuestProgress:RecordShot(BattleTeamId, String) (at Assets/_Project/Scripts/Gameplay/Battle/BattleQuestProgress.cs:93)
+Dreamy.Template.Gameplay.Battle.<LaunchPatternAsync>d__46:MoveNext() (at Assets/_Project/Scripts/Gameplay/Battle/BattleProjectileService.cs:215)
+Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskVoidMethodBuilder:Start(<LaunchPatternAsync>d__46&) (at ./Library/PackageCache/com.cysharp.unitask@360e370345b9/Runtime/CompilerServices/AsyncUniTaskVoidMethodBuilder.cs:110)
+Dreamy.Template.Gameplay.Battle.BattleProjectileService:LaunchPatternAsync(BattleTeamId, WeaponDefinition, Transform, Vector2, Vector2, WeaponRuntimeConfig, IShotPattern, EnergyShotModifier, BattleCharacter, Int32)
+Dreamy.Template.Gameplay.Battle.BattleProjectileService:Launch(BattleTeamId, WeaponDefinition, Transform, Vector2, Vector2, EnergyShotModifier, Action`1, Int64) (at Assets/_Project/Scripts/Gameplay/Battle/BattleProjectileService.cs:170)
+Dreamy.Template.Gameplay.Battle.BattleProjectileService:Launch(BattleTeamId, WeaponDefinition, Transform, Vector2, Vector2, Action`1) (at Assets/_Project/Scripts/Gameplay/Battle/BattleProjectileService.cs:134)
+Dreamy.Template.Tests.Fixture:Launch(BattleTeamId) (at Assets/_Project/Tests/EditMode/BattleQuestProgressTests.cs:499)
+Dreamy.Template.Tests.BattleQuestProgressTests:PartialSaveRetryAfterRolloverNeverRecapturesEitherWindow() (at Assets/_Project/Tests/EditMode/BattleQuestProgressTests.cs:302)
+System.Reflection.MethodBase:Invoke(Object, Object[])
+NUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo, Object, Object[])
+NUnit.Framework.Internal.MethodWrapper:Invoke(Object, Object[])
+NUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)
+NUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)
+NUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions() (at /home/bokken/build/output/unity/unity/Editor/Mono/EditorApplication.cs:401)
+
+]]></output>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1821" name="RuntimeBufferOnlyCommitsActionsAfterValidCompletion" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.RuntimeBufferOnlyCommitsActionsAfterValidCompletion" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.008140" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1819" name="RuntimeBufferOnlyCommitsActionsAfterValidCompletion(False)" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.RuntimeBufferOnlyCommitsActionsAfterValidCompletion(False)" methodname="RuntimeBufferOnlyCommitsActionsAfterValidCompletion" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="960027159" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.003116" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1820" name="RuntimeBufferOnlyCommitsActionsAfterValidCompletion(True)" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.RuntimeBufferOnlyCommitsActionsAfterValidCompletion(True)" methodname="RuntimeBufferOnlyCommitsActionsAfterValidCompletion" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="946523693" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.004340" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-suite type="ParameterizedMethod" id="1847" name="StructuralCollapseCreditsExposureOnceAfterDeferredResolve" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.StructuralCollapseCreditsExposureOnceAfterDeferredResolve" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.017302" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1845" name="StructuralCollapseCreditsExposureOnceAfterDeferredResolve(Left,1)" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.StructuralCollapseCreditsExposureOnceAfterDeferredResolve(Left,1)" methodname="StructuralCollapseCreditsExposureOnceAfterDeferredResolve" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="98317835" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.012375" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1846" name="StructuralCollapseCreditsExposureOnceAfterDeferredResolve(Right,0)" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.StructuralCollapseCreditsExposureOnceAfterDeferredResolve(Right,0)" methodname="StructuralCollapseCreditsExposureOnceAfterDeferredResolve" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="1682656762" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.004233" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1849" name="UnrelatedMotionExposesWithoutPlayerTerrainCredit" fullname="Dreamy.Template.Tests.BattleQuestProgressTests.UnrelatedMotionExposesWithoutPlayerTerrainCredit" methodname="UnrelatedMotionExposesWithoutPlayerTerrainCredit" classname="Dreamy.Template.Tests.BattleQuestProgressTests" runstate="Runnable" seed="1353680010" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.004452" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1851" name="MissionProgressBatchTests" fullname="Dreamy.Template.Tests.MissionProgressBatchTests" classname="Dreamy.Template.Tests.MissionProgressBatchTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.075090" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1852" name="BatchMatchesImmutablePackageForMixedEventsAndSurvivesReload" fullname="Dreamy.Template.Tests.MissionProgressBatchTests.BatchMatchesImmutablePackageForMixedEventsAndSurvivesReload" methodname="BatchMatchesImmutablePackageForMixedEventsAndSurvivesReload" classname="Dreamy.Template.Tests.MissionProgressBatchTests" runstate="Runnable" seed="473221559" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.070611" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1853" name="FailedBatchDoesNotMutateLoadedStateAndCanRetryWithoutDuplicateProgress" fullname="Dreamy.Template.Tests.MissionProgressBatchTests.FailedBatchDoesNotMutateLoadedStateAndCanRetryWithoutDuplicateProgress" methodname="FailedBatchDoesNotMutateLoadedStateAndCanRetryWithoutDuplicateProgress" classname="Dreamy.Template.Tests.MissionProgressBatchTests" runstate="Runnable" seed="846788226" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.001199" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1854" name="RefreshedWindowRejectsOriginalEventsWithoutWriting" fullname="Dreamy.Template.Tests.MissionProgressBatchTests.RefreshedWindowRejectsOriginalEventsWithoutWriting" methodname="RefreshedWindowRejectsOriginalEventsWithoutWriting" classname="Dreamy.Template.Tests.MissionProgressBatchTests" runstate="Runnable" seed="590961522" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.000787" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="2294" name="QuestServiceStrictTests" fullname="Dreamy.Template.Tests.QuestServiceStrictTests" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" testcasecount="32" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.378567" total="32" passed="32" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <output><![CDATA[Destroy may not be called from edit mode! Use DestroyImmediate instead.
+Destroying an object in edit mode destroys it permanently.
+]]></output>
+              <test-case id="2314" name="AllTenObjectivesHaveStableDistinctKeysAndOnlyUnitUseIsDistinct" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.AllTenObjectivesHaveStableDistinctKeysAndOnlyUnitUseIsDistinct" methodname="AllTenObjectivesHaveStableDistinctKeysAndOnlyUnitUseIsDistinct" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="485889582" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.006620" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="2328" name="CardClaimPersistsConcreteJournalBeforeOwnerGrantAtEverySaveBoundary" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.CardClaimPersistsConcreteJournalBeforeOwnerGrantAtEverySaveBoundary" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.103212" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="2323" name="CardClaimPersistsConcreteJournalBeforeOwnerGrantAtEverySaveBoundary(1)" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.CardClaimPersistsConcreteJournalBeforeOwnerGrantAtEverySaveBoundary(1)" methodname="CardClaimPersistsConcreteJournalBeforeOwnerGrantAtEverySaveBoundary" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="1915083550" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.028200" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="2324" name="CardClaimPersistsConcreteJournalBeforeOwnerGrantAtEverySaveBoundary(2)" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.CardClaimPersistsConcreteJournalBeforeOwnerGrantAtEverySaveBoundary(2)" methodname="CardClaimPersistsConcreteJournalBeforeOwnerGrantAtEverySaveBoundary" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="2019626996" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.017550" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="2325" name="CardClaimPersistsConcreteJournalBeforeOwnerGrantAtEverySaveBoundary(3)" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.CardClaimPersistsConcreteJournalBeforeOwnerGrantAtEverySaveBoundary(3)" methodname="CardClaimPersistsConcreteJournalBeforeOwnerGrantAtEverySaveBoundary" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="370702254" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.018508" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="2326" name="CardClaimPersistsConcreteJournalBeforeOwnerGrantAtEverySaveBoundary(4)" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.CardClaimPersistsConcreteJournalBeforeOwnerGrantAtEverySaveBoundary(4)" methodname="CardClaimPersistsConcreteJournalBeforeOwnerGrantAtEverySaveBoundary" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="1340501355" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.018747" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="2327" name="CardClaimPersistsConcreteJournalBeforeOwnerGrantAtEverySaveBoundary(5)" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.CardClaimPersistsConcreteJournalBeforeOwnerGrantAtEverySaveBoundary(5)" methodname="CardClaimPersistsConcreteJournalBeforeOwnerGrantAtEverySaveBoundary" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="1471447036" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.018709" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-suite type="ParameterizedMethod" id="2331" name="CurrencyAndCardClaimsKeepBothPeriodJournalsAcrossEitherOwnerFailure" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.CurrencyAndCardClaimsKeepBothPeriodJournalsAcrossEitherOwnerFailure" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.057409" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="2329" name="CurrencyAndCardClaimsKeepBothPeriodJournalsAcrossEitherOwnerFailure(Dreamy.Template.Gameplay.Progression.ResourceSave)" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.CurrencyAndCardClaimsKeepBothPeriodJournalsAcrossEitherOwnerFailure(Dreamy.Template.Gameplay.Progression.ResourceSave)" methodname="CurrencyAndCardClaimsKeepBothPeriodJournalsAcrossEitherOwnerFailure" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="915040855" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.030522" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="2330" name="CurrencyAndCardClaimsKeepBothPeriodJournalsAcrossEitherOwnerFailure(Dreamy.Template.Gameplay.Progression.UnitProgressSave)" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.CurrencyAndCardClaimsKeepBothPeriodJournalsAcrossEitherOwnerFailure(Dreamy.Template.Gameplay.Progression.UnitProgressSave)" methodname="CurrencyAndCardClaimsKeepBothPeriodJournalsAcrossEitherOwnerFailure" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="1423952501" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.025964" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-suite type="ParameterizedMethod" id="2320" name="CurrencyClaimRecoversEveryQuestSaveBoundaryWithoutDuplicateOwnerGrant" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.CurrencyClaimRecoversEveryQuestSaveBoundaryWithoutDuplicateOwnerGrant" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.059368" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="2316" name="CurrencyClaimRecoversEveryQuestSaveBoundaryWithoutDuplicateOwnerGrant(1)" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.CurrencyClaimRecoversEveryQuestSaveBoundaryWithoutDuplicateOwnerGrant(1)" methodname="CurrencyClaimRecoversEveryQuestSaveBoundaryWithoutDuplicateOwnerGrant" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="1420790101" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.014638" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="2317" name="CurrencyClaimRecoversEveryQuestSaveBoundaryWithoutDuplicateOwnerGrant(2)" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.CurrencyClaimRecoversEveryQuestSaveBoundaryWithoutDuplicateOwnerGrant(2)" methodname="CurrencyClaimRecoversEveryQuestSaveBoundaryWithoutDuplicateOwnerGrant" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="79985649" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.014254" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="2318" name="CurrencyClaimRecoversEveryQuestSaveBoundaryWithoutDuplicateOwnerGrant(3)" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.CurrencyClaimRecoversEveryQuestSaveBoundaryWithoutDuplicateOwnerGrant(3)" methodname="CurrencyClaimRecoversEveryQuestSaveBoundaryWithoutDuplicateOwnerGrant" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="1478540848" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.014493" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="2319" name="CurrencyClaimRecoversEveryQuestSaveBoundaryWithoutDuplicateOwnerGrant(4)" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.CurrencyClaimRecoversEveryQuestSaveBoundaryWithoutDuplicateOwnerGrant(4)" methodname="CurrencyClaimRecoversEveryQuestSaveBoundaryWithoutDuplicateOwnerGrant" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="408623289" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.014702" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="2299" name="FailedExpiredWindowSaveRetainsImportedWindowForRecreate" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.FailedExpiredWindowSaveRetainsImportedWindowForRecreate" methodname="FailedExpiredWindowSaveRetainsImportedWindowForRecreate" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="1997565370" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.009775" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="2315" name="FreshSelectionAndOneFreeRerollStayUniqueEvenWhenAllGroupsConflict" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.FreshSelectionAndOneFreeRerollStayUniqueEvenWhenAllGroupsConflict" methodname="FreshSelectionAndOneFreeRerollStayUniqueEvenWhenAllGroupsConflict" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="1396098692" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.008467" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="2297" name="MigrationPreservesBothOriginalWindowsAndAllValuesBeforeRollover" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.MigrationPreservesBothOriginalWindowsAndAllValuesBeforeRollover" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.015670" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="2295" name="MigrationPreservesBothOriginalWindowsAndAllValuesBeforeRollover(False)" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.MigrationPreservesBothOriginalWindowsAndAllValuesBeforeRollover(False)" methodname="MigrationPreservesBothOriginalWindowsAndAllValuesBeforeRollover" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="2034647066" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.006535" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="2296" name="MigrationPreservesBothOriginalWindowsAndAllValuesBeforeRollover(True)" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.MigrationPreservesBothOriginalWindowsAndAllValuesBeforeRollover(True)" methodname="MigrationPreservesBothOriginalWindowsAndAllValuesBeforeRollover" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="149422817" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.008347" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="2298" name="MigrationSaveFailureLeavesSourceAndBothDestinationsUnchangedUntilRecreate" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.MigrationSaveFailureLeavesSourceAndBothDestinationsUnchangedUntilRecreate" methodname="MigrationSaveFailureLeavesSourceAndBothDestinationsUnchangedUntilRecreate" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="1482128130" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.005143" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="2321" name="MissingCardResolverLeavesIntentAndCanResumeAfterRestartWithoutNewClaimIdentity" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.MissingCardResolverLeavesIntentAndCanResumeAfterRestartWithoutNewClaimIdentity" methodname="MissingCardResolverLeavesIntentAndCanResumeAfterRestartWithoutNewClaimIdentity" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="1592935776" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.015589" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="2332" name="OldPendingClaimFinalizesOnlyItsOriginalWindowAndKeepsOriginalRewardAfterConfigUpdate" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.OldPendingClaimFinalizesOnlyItsOriginalWindowAndKeepsOriginalRewardAfterConfigUpdate" methodname="OldPendingClaimFinalizesOnlyItsOriginalWindowAndKeepsOriginalRewardAfterConfigUpdate" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="1597537924" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.018815" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="2312" name="OldWindowEventsCannotAdvanceSameIdInNewWindowAndClockRollbackCannotReopenIt" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.OldWindowEventsCannotAdvanceSameIdInNewWindowAndClockRollbackCannotReopenIt" methodname="OldWindowEventsCannotAdvanceSameIdInNewWindowAndClockRollbackCannotReopenIt" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="1973097736" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.004472" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="2311" name="PartialTwoPeriodProgressFailureCanReplayTheSameProducerContext" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.PartialTwoPeriodProgressFailureCanReplayTheSameProducerContext" methodname="PartialTwoPeriodProgressFailureCanReplayTheSameProducerContext" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="1537533920" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.009538" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="2310" name="ProgressKeepsDistinctValuesAndSeparateDailyWeeklyOwnersAcrossReplay" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.ProgressKeepsDistinctValuesAndSeparateDailyWeeklyOwnersAcrossReplay" methodname="ProgressKeepsDistinctValuesAndSeparateDailyWeeklyOwnersAcrossReplay" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="747492752" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.011126" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="2322" name="ResolvedCardSnapshotSurvivesSaveFailureAndUsesOriginalRequestOnRecreate" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.ResolvedCardSnapshotSurvivesSaveFailureAndUsesOriginalRequestOnRecreate" methodname="ResolvedCardSnapshotSurvivesSaveFailureAndUsesOriginalRequestOnRecreate" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="619792210" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.017079" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="2309" name="StrictOwnerRejectsBothOldAndNewLegacyWritersAndUncontextualizedRecords" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.StrictOwnerRejectsBothOldAndNewLegacyWritersAndUncontextualizedRecords" methodname="StrictOwnerRejectsBothOldAndNewLegacyWritersAndUncontextualizedRecords" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="855533565" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.003956" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="2304" name="UnknownLegacyStateRequiresMigrationWithoutResettingOrSaving" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.UnknownLegacyStateRequiresMigrationWithoutResettingOrSaving" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.007469" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="2300" name="UnknownLegacyStateRequiresMigrationWithoutResettingOrSaving(&quot;selected&quot;)" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.UnknownLegacyStateRequiresMigrationWithoutResettingOrSaving(&quot;selected&quot;)" methodname="UnknownLegacyStateRequiresMigrationWithoutResettingOrSaving" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="243395700" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.001926" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="2301" name="UnknownLegacyStateRequiresMigrationWithoutResettingOrSaving(&quot;entry&quot;)" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.UnknownLegacyStateRequiresMigrationWithoutResettingOrSaving(&quot;entry&quot;)" methodname="UnknownLegacyStateRequiresMigrationWithoutResettingOrSaving" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="1231571698" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.001475" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="2302" name="UnknownLegacyStateRequiresMigrationWithoutResettingOrSaving(&quot;window&quot;)" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.UnknownLegacyStateRequiresMigrationWithoutResettingOrSaving(&quot;window&quot;)" methodname="UnknownLegacyStateRequiresMigrationWithoutResettingOrSaving" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="631529770" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.001583" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="2303" name="UnknownLegacyStateRequiresMigrationWithoutResettingOrSaving(&quot;period&quot;)" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.UnknownLegacyStateRequiresMigrationWithoutResettingOrSaving(&quot;period&quot;)" methodname="UnknownLegacyStateRequiresMigrationWithoutResettingOrSaving" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="570117337" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.001275" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-suite type="ParameterizedMethod" id="2308" name="UnknownStrictRevisionOrIdRequiresMigrationWithoutWriting" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.UnknownStrictRevisionOrIdRequiresMigrationWithoutWriting" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.016065" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="2305" name="UnknownStrictRevisionOrIdRequiresMigrationWithoutWriting(&quot;migration&quot;)" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.UnknownStrictRevisionOrIdRequiresMigrationWithoutWriting(&quot;migration&quot;)" methodname="UnknownStrictRevisionOrIdRequiresMigrationWithoutWriting" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="899304576" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.005348" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="2306" name="UnknownStrictRevisionOrIdRequiresMigrationWithoutWriting(&quot;definitions&quot;)" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.UnknownStrictRevisionOrIdRequiresMigrationWithoutWriting(&quot;definitions&quot;)" methodname="UnknownStrictRevisionOrIdRequiresMigrationWithoutWriting" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="1040691391" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.005001" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="2307" name="UnknownStrictRevisionOrIdRequiresMigrationWithoutWriting(&quot;selected&quot;)" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.UnknownStrictRevisionOrIdRequiresMigrationWithoutWriting(&quot;selected&quot;)" methodname="UnknownStrictRevisionOrIdRequiresMigrationWithoutWriting" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="376716345" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.004909" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="2313" name="WeeklyWindowChangesExactlyAtMondayMidnightUtcPlusSeven" fullname="Dreamy.Template.Tests.QuestServiceStrictTests.WeeklyWindowChangesExactlyAtMondayMidnightUtcPlusSeven" methodname="WeeklyWindowChangesExactlyAtMondayMidnightUtcPlusSeven" classname="Dreamy.Template.Tests.QuestServiceStrictTests" runstate="Runnable" seed="1623005988" result="Passed" start-time="2026-11-17 07:08:04Z" end-time="2026-11-17 07:08:04Z" duration="0.003699" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: [TestRunnerNoThrottle] Restored Interaction Mode after test run.
+Saving results to: /home/tutrinh/.config/unity3d/Dreamy Game/Orbit Busters/TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

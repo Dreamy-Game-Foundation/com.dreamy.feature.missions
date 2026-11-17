@@ -117,6 +117,9 @@ namespace Dreamy.Missions.Tests
             Assert.Throws<InvalidOperationException>(() => model.ReportProgress("win", "event"));
             Assert.That(model.GetState()[0].Progress, Is.Zero);
             store.ThrowOnSave = false;
+            Assert.That(model.RequiresReload, Is.True);
+            Assert.Throws<MissionReloadRequiredException>(() => model.ReportProgress("win", "event"));
+            model = new MissionModel(Catalog(), store, new Wallet());
             Assert.That(model.ReportProgress("win", "event"), Is.EqualTo(MissionProgressStatus.Updated));
         }
 

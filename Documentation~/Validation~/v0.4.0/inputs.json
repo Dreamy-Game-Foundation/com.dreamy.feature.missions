@@ -1,0 +1,71 @@
+{
+  "release": "0.4.0",
+  "baseCommit": "2474d139cd2c9ca3d1667296be1cd30d579fb7bd",
+  "sourceHashes": {
+    "Runtime/Contracts/IMissionBatchProgress.cs": "e8e367155f26c39adb656bcf022fbfcae24958dcd0bef38d7474b5c4a637fb71",
+    "Runtime/Contracts/IMissionBatchProgress.cs.meta": "62b1142ff82763a26cb8371fb3f6409246806332c8d890ee48d549fda01cf0db",
+    "Runtime/Domain/MissionModel.Batch.cs": "82ce5e333365623f44a0ba1cdf9abe49e7cc33e7fd3889f510881f97c0ddb94e",
+    "Runtime/Domain/MissionModel.Batch.cs.meta": "d46a3d2162a02afab3d531f5526e66b19d8d5ef7453c8d288e02b025b9c3beb8",
+    "Runtime/Domain/MissionModel.cs": "7fc046702035fcfabc368179fce7da088f31b09e484e984d68a5b52aa4913b34",
+    "Runtime/Persistence/MissionSaveCopy.cs": "e0d0e3e71543d8ac3250825c554fe0be10e3aef9af5ea9f7a6d34f538397f8c3",
+    "Runtime/Persistence/MissionSaveCopy.cs.meta": "1f32ce50b53ff95a7e173ce91c40a549d4528a2569a768443293b3451ff6ea98",
+    "Tests/Runtime/MissionBatchTests.cs": "3f3cc176bf67b8685466b6fd62669ce7d0ee53654f7169204f157c5fbbf548b5",
+    "Tests/Runtime/MissionBatchTests.cs.meta": "7e9dafb6f2f0c2d727786eb7cb9b47e29e8f88c89a77498294acecf532dce217",
+    "Tests/Runtime/MissionModelTests.cs": "ff03eb8df55a4add69b6429d0baf8f0b6df4f2a6c9eb48b12fa08fc6d19a9a9f",
+    "Tests/Runtime/MissionPeriodicTests.cs": "0768c2025d8b6e02909a784a3bd582ce5023bb0849a804240b1455fde503b6a7"
+  },
+  "packageManifestSha256": "bcc38733375589d53df84ecf2325bbaa540cd17350983a7d2ebd59dcf863a2cb",
+  "dependencies": {
+    "com.dreamy.core": {
+      "head": "a491b74282456ddf7a707f5bf4e31f08c589627d",
+      "package": "1.2.0",
+      "dirty": false
+    },
+    "com.dreamy.feature": {
+      "head": "fec5ceeb850964c4a76d5b763cef3c1db406fec1",
+      "package": "0.2.0",
+      "dirty": false
+    },
+    "com.dreamy.feature.economy": {
+      "head": "2ed43e881a879d93eab9d67f88e5c1c50b0ad77e",
+      "package": "0.8.1",
+      "dirty": false
+    },
+    "com.dreamy.dataconfig": {
+      "head": "df0a952f2ce95e3742b13d3607af2eb8dcb7df3c",
+      "package": "1.0.1",
+      "dirty": false
+    },
+    "com.dreamy.datasave": {
+      "head": "8e8fcc82ff953c92986167c794e7c076b0d48236",
+      "package": "1.0.1",
+      "dirty": false
+    }
+  },
+  "receipts": {
+    "allocations-net10.jsonl": "0b5ab9bd5fde81d2b6f86f7a197dd2e624ac5fee37d4963b7b366d39070f29ec",
+    "consumer-migrated.xml": "77f59fca734d430a0d3a7f6ffc38174f62464d32884ebffc07f1be8c15716d38",
+    "minimum-dependencies.json": "41e3ba051d1b6c8f7faca28f6f9d3a044e6e1014b77cde2433b1c6ba6ceb5d43",
+    "minimum-unity.xml": "db3339973639bb6de859df4a1b2bb143da29a08a10e176a6a12b761e6eaffbe3",
+    "package-final.xml": "529891928bdaeb51a2bb93d38f900eea5a2687facdc751cb1283bc9304c0c6f7"
+  },
+  "android": {
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 0,
+    "bytes": 298635987,
+    "sha256": "ef1c26dfb1e3b1c973fbcc1d807cf3cf6d573b36b5b6268b01ca36845308fe96",
+    "apkFileBytes": 32468067,
+    "nativeLibraries": [
+      "lib/arm64-v8a/libc++_shared.so",
+      "lib/arm64-v8a/libgame.so",
+      "lib/arm64-v8a/libmain.so",
+      "lib/arm64-v8a/libswappywrapper.so",
+      "lib/arm64-v8a/libunity.so",
+      "lib/arm64-v8a/libil2cpp.so"
+    ],
+    "deviceRuntime": "not-run: user has no Android device available",
+    "probe": "MissionsBatchProbe: batch 30 events, reopen concrete DatasaveService, verify replay and count=30"
+  },
+  "note": "Runtime/test sources match final successful receipts; release metadata/docs were changed afterward. Physical device execution not run."
+}

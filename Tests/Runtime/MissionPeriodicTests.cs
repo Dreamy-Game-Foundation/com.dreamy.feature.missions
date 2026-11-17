@@ -94,9 +94,11 @@ namespace Dreamy.Missions.Tests
             Assert.That(model.Window.EndUtcTicks, Is.EqualTo(originalWindow.EndUtcTicks));
             Assert.That(events, Is.Zero);
             store.Fail = false;
-            Assert.That(model.Refresh(), Is.EqualTo(MissionRefreshStatus.Updated));
+            Assert.That(model.RequiresReload, Is.True);
+            Assert.Throws<MissionReloadRequiredException>(() => model.Refresh());
+            model = Model(Config(), store, new Gateway(store), clock);
             Assert.That(model.Window.StartUtcTicks, Is.EqualTo(originalWindow.EndUtcTicks));
-            Assert.That(events, Is.EqualTo(1));
+            Assert.That(events, Is.Zero);
         }
 
         [Test] public void RevisionIsDeferred_AndOldDefinitionCanClaimUntilBoundary()
@@ -217,6 +219,8 @@ namespace Dreamy.Missions.Tests
             Assert.That(model.GetState()[0].Definition.Id, Is.EqualTo(original));
             Assert.That(model.RerollsUsed, Is.Zero);
             store.Fail = false;
+            Assert.That(model.RequiresReload, Is.True);
+            model = Model(Parse(doc), store, new Gateway(store), clock, new RandomSource());
             Assert.That(model.Reroll(original), Is.EqualTo(MissionRerollStatus.Rerolled));
         }
 
@@ -295,6 +299,9 @@ namespace Dreamy.Missions.Tests
             Assert.Throws<InvalidOperationException>(() => model.ReportProgress("act", "one", "n", window, distinctValue: "unit-a"));
             Assert.That(model.GetState()[0].Progress, Is.Zero);
             store.Fail = false;
+            Assert.That(model.RequiresReload, Is.True);
+            model = Model(Parse(doc), store, new Gateway(store), clock);
+            model.StateChanged += () => Assert.That(model.Claim("a"), Is.EqualTo(MissionClaimStatus.Busy));
             model.ReportProgress("act", "one", "n", window, distinctValue: "unit-a");
             Assert.That(model.GetState()[0].Progress, Is.EqualTo(1));
         }
@@ -415,6 +422,22 @@ namespace Dreamy.Missions.Tests
             Assert.That(pending.WindowSnapshot.Revision, Is.EqualTo("one"));
             Assert.That(pending.WindowSnapshot.Missions["a"].Claimed, Is.True);
             Assert.That(model.GetState()[0].IsClaimed, Is.False);
+        }
+
+        [Test] public void BatchProgress_PreservesPendingRewardJournal_AndRecoversOnce()
+        {
+            Store store = new(); Clock clock = new(); Gateway gateway = new(store) { Pending = true };
+            MissionModel model = Model(Config(), store, gateway, clock);
+            model.ReportProgress("act", "complete", "batch", model.WindowId, 3);
+            Assert.That(model.Claim("a"), Is.EqualTo(MissionClaimStatus.Pending));
+            string journal = JsonConvert.SerializeObject(store.Load<MissionSaveData>("missions").PendingClaims);
+            model.ReportProgressBatch(new[] { new MissionProgressEvent("act", "new", "batch", model.WindowId) });
+            Assert.That(JsonConvert.SerializeObject(store.Load<MissionSaveData>("missions").PendingClaims), Is.EqualTo(journal));
+            gateway.Pending = false;
+            Assert.That(model.RecoverClaims(), Is.EqualTo(MissionClaimStatus.Claimed));
+            model = Model(Config(), store, new Gateway(store), clock);
+            Assert.That(model.RecoverClaims(), Is.EqualTo(MissionClaimStatus.AlreadyClaimed));
+            Assert.That(gateway.Total, Is.EqualTo(10));
         }
 
         [Test] public void GatewayReentry_IsBusyThroughoutValidationDeliveryAndFinalEvent()

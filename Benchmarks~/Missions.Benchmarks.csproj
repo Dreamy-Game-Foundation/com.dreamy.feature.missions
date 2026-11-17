@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <DreamyPackagesRoot Condition="'$(DreamyPackagesRoot)' == ''">$(MSBuildThisFileDirectory)../../</DreamyPackagesRoot>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="../Runtime/Domain/*.cs;../Runtime/Config/*.cs;../Runtime/Contracts/*.cs;../Runtime/Persistence/*.cs" />
+    <Compile Include="$(DreamyPackagesRoot)com.dreamy.feature/Runtime/IFeatureView.cs" />
+    <Compile Include="$(DreamyPackagesRoot)com.dreamy.datasave/Runtime/SaveData.cs;$(DreamyPackagesRoot)com.dreamy.datasave/Runtime/IDatasaveService.cs" />
+    <Compile Include="$(DreamyPackagesRoot)com.dreamy.dataconfig/Runtime/ConfigBase.cs;$(DreamyPackagesRoot)com.dreamy.dataconfig/Runtime/DataConfigAttribute.cs;$(DreamyPackagesRoot)com.dreamy.dataconfig/Runtime/DataConfigException.cs;$(DreamyPackagesRoot)com.dreamy.dataconfig/Runtime/IDataConfigTable.cs" />
+    <Compile Include="$(DreamyPackagesRoot)com.dreamy.feature.economy/Runtime/IResourceWallet.cs;$(DreamyPackagesRoot)com.dreamy.feature.economy/Runtime/ResourceAmount.cs;$(DreamyPackagesRoot)com.dreamy.feature.economy/Runtime/ResourceId.cs;$(DreamyPackagesRoot)com.dreamy.feature.economy/Runtime/ResourceGrantRequest.cs;$(DreamyPackagesRoot)com.dreamy.feature.economy/Runtime/ResourceExchangeRequest.cs" />
+    <Compile Include="$(DreamyPackagesRoot)com.dreamy.feature.economy/Runtime/Rewards/*.cs" Exclude="$(DreamyPackagesRoot)com.dreamy.feature.economy/Runtime/Rewards/DatasaveResourceWallet.Rewards.cs;$(DreamyPackagesRoot)com.dreamy.feature.economy/Runtime/Rewards/ResourceRewardDefinition.cs" />
+    <Reference Include="Newtonsoft.Json" HintPath="$(NewtonsoftJsonPath)" />
+  </ItemGroup>
+  <Target Name="RequireNewtonsoft" BeforeTargets="ResolveReferences" Condition="!Exists('$(NewtonsoftJsonPath)')">
+    <Error Text="Pass -p:NewtonsoftJsonPath=/absolute/path/to/Newtonsoft.Json.dll from the validated consumer." />
+  </Target>
+</Project>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="30" result="Passed" total="30" passed="30" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-11-17 07:07:47Z" end-time="2026-11-17 07:07:52Z" duration="4.8072833">
+  <test-suite type="TestSuite" id="1000" name="android-probe" fullname="android-probe" runstate="Runnable" testcasecount="30" result="Passed" start-time="2026-11-17 07:07:47Z" end-time="2026-11-17 07:07:52Z" duration="4.807283" total="30" passed="30" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1039" name="Validation.Tests.dll" fullname="[minimum-host]/Library/ScriptAssemblies/Validation.Tests.dll" runstate="Runnable" testcasecount="30" result="Passed" start-time="2026-11-17 07:07:47Z" end-time="2026-11-17 07:07:52Z" duration="4.801817" total="30" passed="30" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="1100810" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1040" name="Dreamy" fullname="Dreamy" runstate="Runnable" testcasecount="30" result="Passed" start-time="2026-11-17 07:07:47Z" end-time="2026-11-17 07:07:52Z" duration="4.801608" total="30" passed="30" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1041" name="Missions" fullname="Dreamy.Missions" runstate="Runnable" testcasecount="30" result="Passed" start-time="2026-11-17 07:07:47Z" end-time="2026-11-17 07:07:52Z" duration="4.801550" total="30" passed="30" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1042" name="Tests" fullname="Dreamy.Missions.Tests" runstate="Runnable" testcasecount="30" result="Passed" start-time="2026-11-17 07:07:47Z" end-time="2026-11-17 07:07:52Z" duration="4.801476" total="30" passed="30" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1002" name="MissionBatchTests" fullname="Dreamy.Missions.Tests.MissionBatchTests" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" testcasecount="30" result="Passed" start-time="2026-11-17 07:07:47Z" end-time="2026-11-17 07:07:52Z" duration="4.801032" total="30" passed="30" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1003" name="Batch_MatchesSequentialStateAndStatuses_WithMixedInputs" fullname="Dreamy.Missions.Tests.MissionBatchTests.Batch_MatchesSequentialStateAndStatuses_WithMixedInputs" methodname="Batch_MatchesSequentialStateAndStatuses_WithMixedInputs" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="20182410" result="Passed" start-time="2026-11-17 07:07:47Z" end-time="2026-11-17 07:07:47Z" duration="0.135755" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1038" name="Benchmark_LargeReceiptJournal" fullname="Dreamy.Missions.Tests.MissionBatchTests.Benchmark_LargeReceiptJournal" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-11-17 07:07:47Z" end-time="2026-11-17 07:07:47Z" duration="0.518853" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties>
+                  <property name="Category" value="MissionBatchBenchmark" />
+                </properties>
+                <test-case id="1032" name="Benchmark_LargeReceiptJournal(4096,30)" fullname="Dreamy.Missions.Tests.MissionBatchTests.Benchmark_LargeReceiptJournal(4096,30)" methodname="Benchmark_LargeReceiptJournal" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="428801935" result="Passed" start-time="2026-11-17 07:07:47Z" end-time="2026-11-17 07:07:47Z" duration="0.027397" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[receipts=4096; shots=30; eventsPerShot=1; batch=False; allocatedBytes=unsupported-on-this-runtime; ms=10.403; commits=30; notifications=30; store=reference
+receipts=4096; shots=30; eventsPerShot=1; batch=True; allocatedBytes=unsupported-on-this-runtime; ms=0.383; commits=1; notifications=1; store=reference
+]]></output>
+                </test-case>
+                <test-case id="1033" name="Benchmark_LargeReceiptJournal(4096,60)" fullname="Dreamy.Missions.Tests.MissionBatchTests.Benchmark_LargeReceiptJournal(4096,60)" methodname="Benchmark_LargeReceiptJournal" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="1018669249" result="Passed" start-time="2026-11-17 07:07:47Z" end-time="2026-11-17 07:07:47Z" duration="0.020646" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[receipts=4096; shots=60; eventsPerShot=1; batch=False; allocatedBytes=unsupported-on-this-runtime; ms=15.435; commits=60; notifications=60; store=reference
+receipts=4096; shots=60; eventsPerShot=1; batch=True; allocatedBytes=unsupported-on-this-runtime; ms=0.346; commits=1; notifications=1; store=reference
+]]></output>
+                </test-case>
+                <test-case id="1034" name="Benchmark_LargeReceiptJournal(4096,100)" fullname="Dreamy.Missions.Tests.MissionBatchTests.Benchmark_LargeReceiptJournal(4096,100)" methodname="Benchmark_LargeReceiptJournal" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="303949642" result="Passed" start-time="2026-11-17 07:07:47Z" end-time="2026-11-17 07:07:47Z" duration="0.029108" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[receipts=4096; shots=100; eventsPerShot=1; batch=False; allocatedBytes=unsupported-on-this-runtime; ms=19.298; commits=100; notifications=100; store=reference
+receipts=4096; shots=100; eventsPerShot=1; batch=True; allocatedBytes=unsupported-on-this-runtime; ms=0.509; commits=1; notifications=1; store=reference
+]]></output>
+                </test-case>
+                <test-case id="1035" name="Benchmark_LargeReceiptJournal(50000,30)" fullname="Dreamy.Missions.Tests.MissionBatchTests.Benchmark_LargeReceiptJournal(50000,30)" methodname="Benchmark_LargeReceiptJournal" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="1373167754" result="Passed" start-time="2026-11-17 07:07:47Z" end-time="2026-11-17 07:07:47Z" duration="0.111554" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[receipts=50000; shots=30; eventsPerShot=1; batch=False; allocatedBytes=unsupported-on-this-runtime; ms=46.957; commits=30; notifications=30; store=reference
+receipts=50000; shots=30; eventsPerShot=1; batch=True; allocatedBytes=unsupported-on-this-runtime; ms=4.862; commits=1; notifications=1; store=reference
+]]></output>
+                </test-case>
+                <test-case id="1036" name="Benchmark_LargeReceiptJournal(50000,60)" fullname="Dreamy.Missions.Tests.MissionBatchTests.Benchmark_LargeReceiptJournal(50000,60)" methodname="Benchmark_LargeReceiptJournal" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="451552999" result="Passed" start-time="2026-11-17 07:07:47Z" end-time="2026-11-17 07:07:47Z" duration="0.147609" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[receipts=50000; shots=60; eventsPerShot=1; batch=False; allocatedBytes=unsupported-on-this-runtime; ms=97.031; commits=60; notifications=60; store=reference
+receipts=50000; shots=60; eventsPerShot=1; batch=True; allocatedBytes=unsupported-on-this-runtime; ms=1.945; commits=1; notifications=1; store=reference
+]]></output>
+                </test-case>
+                <test-case id="1037" name="Benchmark_LargeReceiptJournal(50000,100)" fullname="Dreamy.Missions.Tests.MissionBatchTests.Benchmark_LargeReceiptJournal(50000,100)" methodname="Benchmark_LargeReceiptJournal" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="1204175175" result="Passed" start-time="2026-11-17 07:07:47Z" end-time="2026-11-17 07:07:47Z" duration="0.180124" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[receipts=50000; shots=100; eventsPerShot=1; batch=False; allocatedBytes=unsupported-on-this-runtime; ms=132.299; commits=100; notifications=100; store=reference
+receipts=50000; shots=100; eventsPerShot=1; batch=True; allocatedBytes=unsupported-on-this-runtime; ms=2.106; commits=1; notifications=1; store=reference
+]]></output>
+                </test-case>
+              </test-suite>
+              <test-suite type="ParameterizedMethod" id="1026" name="Benchmark_RealDatasave" fullname="Dreamy.Missions.Tests.MissionBatchTests.Benchmark_RealDatasave" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-17 07:07:47Z" end-time="2026-11-17 07:07:51Z" duration="4.057478" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties>
+                  <property name="Category" value="MissionBatchBenchmark" />
+                </properties>
+                <test-case id="1022" name="Benchmark_RealDatasave(4096,30)" fullname="Dreamy.Missions.Tests.MissionBatchTests.Benchmark_RealDatasave(4096,30)" methodname="Benchmark_RealDatasave" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="2086866991" result="Passed" start-time="2026-11-17 07:07:47Z" end-time="2026-11-17 07:07:48Z" duration="0.104263" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[receipts=4096; shots=30; eventsPerShot=1; batch=False; ms=53.976; commits=30; store=real-Datasave; allocation=unsupported-on-Unity-Mono
+receipts=4096; shots=30; eventsPerShot=1; batch=True; ms=1.522; commits=1; store=real-Datasave; allocation=unsupported-on-Unity-Mono
+]]></output>
+                </test-case>
+                <test-case id="1023" name="Benchmark_RealDatasave(4096,100)" fullname="Dreamy.Missions.Tests.MissionBatchTests.Benchmark_RealDatasave(4096,100)" methodname="Benchmark_RealDatasave" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="536687911" result="Passed" start-time="2026-11-17 07:07:48Z" end-time="2026-11-17 07:07:48Z" duration="0.234430" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[receipts=4096; shots=100; eventsPerShot=1; batch=False; ms=199.430; commits=100; store=real-Datasave; allocation=unsupported-on-Unity-Mono
+receipts=4096; shots=100; eventsPerShot=1; batch=True; ms=6.458; commits=1; store=real-Datasave; allocation=unsupported-on-Unity-Mono
+]]></output>
+                </test-case>
+                <test-case id="1024" name="Benchmark_RealDatasave(50000,30)" fullname="Dreamy.Missions.Tests.MissionBatchTests.Benchmark_RealDatasave(50000,30)" methodname="Benchmark_RealDatasave" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="51835026" result="Passed" start-time="2026-11-17 07:07:48Z" end-time="2026-11-17 07:07:49Z" duration="1.008365" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[receipts=50000; shots=30; eventsPerShot=1; batch=False; ms=642.730; commits=30; store=real-Datasave; allocation=unsupported-on-Unity-Mono
+receipts=50000; shots=30; eventsPerShot=1; batch=True; ms=24.998; commits=1; store=real-Datasave; allocation=unsupported-on-Unity-Mono
+]]></output>
+                </test-case>
+                <test-case id="1025" name="Benchmark_RealDatasave(50000,100)" fullname="Dreamy.Missions.Tests.MissionBatchTests.Benchmark_RealDatasave(50000,100)" methodname="Benchmark_RealDatasave" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="191332056" result="Passed" start-time="2026-11-17 07:07:49Z" end-time="2026-11-17 07:07:51Z" duration="2.709797" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[receipts=50000; shots=100; eventsPerShot=1; batch=False; ms=2361.149; commits=100; store=real-Datasave; allocation=unsupported-on-Unity-Mono
+receipts=50000; shots=100; eventsPerShot=1; batch=True; ms=20.941; commits=1; store=real-Datasave; allocation=unsupported-on-Unity-Mono
+]]></output>
+                </test-case>
+              </test-suite>
+              <test-case id="1011" name="CounterCaps_ClaimedAndCompletedMissionsStillConsumeReceipts" fullname="Dreamy.Missions.Tests.MissionBatchTests.CounterCaps_ClaimedAndCompletedMissionsStillConsumeReceipts" methodname="CounterCaps_ClaimedAndCompletedMissionsStillConsumeReceipts" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="199687526" result="Passed" start-time="2026-11-17 07:07:51Z" end-time="2026-11-17 07:07:51Z" duration="0.001894" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1021" name="DetachedCopies_PreservePoliciesDefinitionsAndJournal_WithoutMutableAliases" fullname="Dreamy.Missions.Tests.MissionBatchTests.DetachedCopies_PreservePoliciesDefinitionsAndJournal_WithoutMutableAliases" methodname="DetachedCopies_PreservePoliciesDefinitionsAndJournal_WithoutMutableAliases" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="11955757" result="Passed" start-time="2026-11-17 07:07:51Z" end-time="2026-11-17 07:07:51Z" duration="0.016209" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1004" name="Duplicates_InAcrossBatchesAndReload_KeepOriginalIdentity" fullname="Dreamy.Missions.Tests.MissionBatchTests.Duplicates_InAcrossBatchesAndReload_KeepOriginalIdentity" methodname="Duplicates_InAcrossBatchesAndReload_KeepOriginalIdentity" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="1999966919" result="Passed" start-time="2026-11-17 07:07:51Z" end-time="2026-11-17 07:07:51Z" duration="0.001173" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1013" name="EmptyInvalidAndDuplicateOnlyBatches_DoNotCommitOrNotify" fullname="Dreamy.Missions.Tests.MissionBatchTests.EmptyInvalidAndDuplicateOnlyBatches_DoNotCommitOrNotify" methodname="EmptyInvalidAndDuplicateOnlyBatches_DoNotCommitOrNotify" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="72801469" result="Passed" start-time="2026-11-17 07:07:51Z" end-time="2026-11-17 07:07:51Z" duration="0.002482" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1010" name="PermanentEviction_DoesNotForgetEarlierItemsWithinBatch" fullname="Dreamy.Missions.Tests.MissionBatchTests.PermanentEviction_DoesNotForgetEarlierItemsWithinBatch" methodname="PermanentEviction_DoesNotForgetEarlierItemsWithinBatch" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="198738796" result="Passed" start-time="2026-11-17 07:07:51Z" end-time="2026-11-17 07:07:51Z" duration="0.000618" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1016" name="PersistenceFailure_RequiresAuthoritativeReload_ThenRetryIsExactlyOnce" fullname="Dreamy.Missions.Tests.MissionBatchTests.PersistenceFailure_RequiresAuthoritativeReload_ThenRetryIsExactlyOnce" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-11-17 07:07:51Z" end-time="2026-11-17 07:07:51Z" duration="0.002587" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1014" name="PersistenceFailure_RequiresAuthoritativeReload_ThenRetryIsExactlyOnce(False)" fullname="Dreamy.Missions.Tests.MissionBatchTests.PersistenceFailure_RequiresAuthoritativeReload_ThenRetryIsExactlyOnce(False)" methodname="PersistenceFailure_RequiresAuthoritativeReload_ThenRetryIsExactlyOnce" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="66370980" result="Passed" start-time="2026-11-17 07:07:51Z" end-time="2026-11-17 07:07:51Z" duration="0.001625" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1015" name="PersistenceFailure_RequiresAuthoritativeReload_ThenRetryIsExactlyOnce(True)" fullname="Dreamy.Missions.Tests.MissionBatchTests.PersistenceFailure_RequiresAuthoritativeReload_ThenRetryIsExactlyOnce(True)" methodname="PersistenceFailure_RequiresAuthoritativeReload_ThenRetryIsExactlyOnce" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="596156956" result="Passed" start-time="2026-11-17 07:07:51Z" end-time="2026-11-17 07:07:51Z" duration="0.000302" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-suite type="ParameterizedMethod" id="1009" name="RandomizedChunksAndReload_MatchSequentialPublicApi" fullname="Dreamy.Missions.Tests.MissionBatchTests.RandomizedChunksAndReload_MatchSequentialPublicApi" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-17 07:07:51Z" end-time="2026-11-17 07:07:52Z" duration="0.041983" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1005" name="RandomizedChunksAndReload_MatchSequentialPublicApi(17,False)" fullname="Dreamy.Missions.Tests.MissionBatchTests.RandomizedChunksAndReload_MatchSequentialPublicApi(17,False)" methodname="RandomizedChunksAndReload_MatchSequentialPublicApi" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="218446202" result="Passed" start-time="2026-11-17 07:07:51Z" end-time="2026-11-17 07:07:52Z" duration="0.018665" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1006" name="RandomizedChunksAndReload_MatchSequentialPublicApi(913,False)" fullname="Dreamy.Missions.Tests.MissionBatchTests.RandomizedChunksAndReload_MatchSequentialPublicApi(913,False)" methodname="RandomizedChunksAndReload_MatchSequentialPublicApi" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="2051939550" result="Passed" start-time="2026-11-17 07:07:52Z" end-time="2026-11-17 07:07:52Z" duration="0.006042" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1007" name="RandomizedChunksAndReload_MatchSequentialPublicApi(17,True)" fullname="Dreamy.Missions.Tests.MissionBatchTests.RandomizedChunksAndReload_MatchSequentialPublicApi(17,True)" methodname="RandomizedChunksAndReload_MatchSequentialPublicApi" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="538664067" result="Passed" start-time="2026-11-17 07:07:52Z" end-time="2026-11-17 07:07:52Z" duration="0.007286" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1008" name="RandomizedChunksAndReload_MatchSequentialPublicApi(913,True)" fullname="Dreamy.Missions.Tests.MissionBatchTests.RandomizedChunksAndReload_MatchSequentialPublicApi(913,True)" methodname="RandomizedChunksAndReload_MatchSequentialPublicApi" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="434297177" result="Passed" start-time="2026-11-17 07:07:52Z" end-time="2026-11-17 07:07:52Z" duration="0.009538" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-suite type="ParameterizedMethod" id="1031" name="RealDatasaveFault_ReloadsDurableProgressAndOriginalReceipts" fullname="Dreamy.Missions.Tests.MissionBatchTests.RealDatasaveFault_ReloadsDurableProgressAndOriginalReceipts" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-17 07:07:52Z" end-time="2026-11-17 07:07:52Z" duration="0.010410" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1027" name="RealDatasaveFault_ReloadsDurableProgressAndOriginalReceipts(False,False)" fullname="Dreamy.Missions.Tests.MissionBatchTests.RealDatasaveFault_ReloadsDurableProgressAndOriginalReceipts(False,False)" methodname="RealDatasaveFault_ReloadsDurableProgressAndOriginalReceipts" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="1822516771" result="Passed" start-time="2026-11-17 07:07:52Z" end-time="2026-11-17 07:07:52Z" duration="0.004032" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1028" name="RealDatasaveFault_ReloadsDurableProgressAndOriginalReceipts(True,False)" fullname="Dreamy.Missions.Tests.MissionBatchTests.RealDatasaveFault_ReloadsDurableProgressAndOriginalReceipts(True,False)" methodname="RealDatasaveFault_ReloadsDurableProgressAndOriginalReceipts" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="95770200" result="Passed" start-time="2026-11-17 07:07:52Z" end-time="2026-11-17 07:07:52Z" duration="0.001539" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1029" name="RealDatasaveFault_ReloadsDurableProgressAndOriginalReceipts(False,True)" fullname="Dreamy.Missions.Tests.MissionBatchTests.RealDatasaveFault_ReloadsDurableProgressAndOriginalReceipts(False,True)" methodname="RealDatasaveFault_ReloadsDurableProgressAndOriginalReceipts" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="1266396008" result="Passed" start-time="2026-11-17 07:07:52Z" end-time="2026-11-17 07:07:52Z" duration="0.001299" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1030" name="RealDatasaveFault_ReloadsDurableProgressAndOriginalReceipts(True,True)" fullname="Dreamy.Missions.Tests.MissionBatchTests.RealDatasaveFault_ReloadsDurableProgressAndOriginalReceipts(True,True)" methodname="RealDatasaveFault_ReloadsDurableProgressAndOriginalReceipts" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="1018262314" result="Passed" start-time="2026-11-17 07:07:52Z" end-time="2026-11-17 07:07:52Z" duration="0.003048" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1012" name="RolloverAndRollback_UseOneClockReadAndOneCommit" fullname="Dreamy.Missions.Tests.MissionBatchTests.RolloverAndRollback_UseOneClockReadAndOneCommit" methodname="RolloverAndRollback_UseOneClockReadAndOneCommit" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="1275828314" result="Passed" start-time="2026-11-17 07:07:52Z" end-time="2026-11-17 07:07:52Z" duration="0.000734" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1019" name="RolloverFailure_DoesNotPublishPartialWindow" fullname="Dreamy.Missions.Tests.MissionBatchTests.RolloverFailure_DoesNotPublishPartialWindow" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-11-17 07:07:52Z" end-time="2026-11-17 07:07:52Z" duration="0.001344" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1017" name="RolloverFailure_DoesNotPublishPartialWindow(False)" fullname="Dreamy.Missions.Tests.MissionBatchTests.RolloverFailure_DoesNotPublishPartialWindow(False)" methodname="RolloverFailure_DoesNotPublishPartialWindow" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="389246067" result="Passed" start-time="2026-11-17 07:07:52Z" end-time="2026-11-17 07:07:52Z" duration="0.000730" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1018" name="RolloverFailure_DoesNotPublishPartialWindow(True)" fullname="Dreamy.Missions.Tests.MissionBatchTests.RolloverFailure_DoesNotPublishPartialWindow(True)" methodname="RolloverFailure_DoesNotPublishPartialWindow" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="223012019" result="Passed" start-time="2026-11-17 07:07:52Z" end-time="2026-11-17 07:07:52Z" duration="0.000250" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1020" name="SaveAndNotificationReentry_AreBusy_AndSubscriberFailureIsAfterCommit" fullname="Dreamy.Missions.Tests.MissionBatchTests.SaveAndNotificationReentry_AreBusy_AndSubscriberFailureIsAfterCommit" methodname="SaveAndNotificationReentry_AreBusy_AndSubscriberFailureIsAfterCommit" classname="Dreamy.Missions.Tests.MissionBatchTests" runstate="Runnable" seed="2003613897" result="Passed" start-time="2026-11-17 07:07:52Z" end-time="2026-11-17 07:07:52Z" duration="0.001161" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Saving results to: [sandbox]/docs/evidence/missions-batch-api-2026-11-17/minimum-unity.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

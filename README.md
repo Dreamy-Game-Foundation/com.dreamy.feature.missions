@@ -1,10 +1,10 @@
 # Dreamy Missions
 
-## Phiên bản 0.3.1
+## Phiên bản 0.4.0
 
-Hide the periodic-missions sample rebuild menu; keep the supplied sample assets and validation entry points. Runtime/save contracts are unchanged.
+Thêm batch progress API: xử lý nhiều event trên một detached candidate, tối đa một save và một StateChanged, kể cả rollover. Giữ IMissionService và các chữ ký single-event hiện có; save schema vẫn là v2.
 
-Bản chuẩn bị phát hành nội bộ ngày 2026-11-06; chưa tạo/push tag. Giữ nguyên các sample đã import và meta GUID; import mới dùng version 0.3.1. Xem [CHANGELOG](CHANGELOG.md).
+Khi Save báo lỗi, host phải kiểm tra RequiresReload, dựng lại model từ persistence đáng tin cậy và retry original IDs/captured windows. Không tự kích hoạt claim recovery khi render kết quả lỗi. Xem [batch API và hướng dẫn migration](Documentation~/BatchProgress.md), [CHANGELOG](CHANGELOG.md) và [bằng chứng kiểm thử](Documentation~/Validation~/v0.4.0/README.md).
 
 Kỳ nhiệm vụ, selection/reroll đã lưu, objective đếm giá trị khác nhau và claim
 reward có recovery được mô tả trong
@@ -23,8 +23,9 @@ Dependency trực tiếp theo package.json:
 - `com.dreamy.feature` (0.2.0)
 - `com.dreamy.dataconfig` (0.2.0)
 - `com.dreamy.datasave` (0.2.0)
-- `com.dreamy.feature.economy` (0.3.0)
+- `com.dreamy.feature.economy` (0.7.0)
 - `com.unity.nuget.newtonsoft-json` (3.2.1)
+- `com.cysharp.unitask` (2.5.10)
 
 ## Cấu trúc và asmdef
 
